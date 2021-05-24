@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Tasks for Today {{dateNow}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let hours of hours; let i = index">
+    <p class="pl-2">Delivery run {{i+1}} Time: {{hours.from}} - {{hours.to}}</p>
+    <!-- If no delivery -->
+    <ion-card flat *ngIf="!hours.status">
+      <ion-card-content class="flex">
+        <div>
+          <div class="empty-image">
+            <img class="empty-img" src="../../../assets/images/empty-box.png" alt="empty-box">
+          </div>
+          <p class="empty-msg">No Delivery</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <div *ngFor="let route of routes">
+      <ion-card *ngIf="route.batch == hours.key"
+        [ngClass]="{'done': route.parcel.done, 'failed': route.parcel.done === false, 'inProgress': route.parcel.done === undefined}"
+        (click)="sendData(route)">
+        <!-- route.done  for colors-->
+        <p class="split">{{route.parcel.activity}}
+          <span>{{route.parcel.activityDetails.time}}</span>
+        </p>
+        <ion-card-content no-padding padding-bottom padding-horizontal>
+          <p>
+            <ion-icon name="pin" slot="start"></ion-icon>{{route.parcel.activityDetails.location.address}}
+          </p>
+          <p>
+            <ion-icon name="person" slot="start"></ion-icon>{{route.parcel.activityDetails.name}}
+          </p>
+          <p>
+            <ion-icon name="call" slot="start"></ion-icon> {{route.parcel.activityDetails.contact}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

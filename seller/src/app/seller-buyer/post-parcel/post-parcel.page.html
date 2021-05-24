@@ -1,0 +1,256 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="../../../assets/images/new_brand.png" width="90px" height="30px">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+  <ion-grid>
+    <form [formGroup]="forms" (ngSubmit)="postPickup(forms.value)">
+      <ion-label position="stacked" class="form-label pl-3 pt-2" color="tertiary">Parcel size</ion-label>
+      <ion-row class="ba ma-3">
+        <ion-col class="pa-0">
+          <!-- Segment for the choice of pouch size-->
+          <ion-segment formControlName='itemSize'>
+            <ion-segment-button value="small" class="small">
+              <ion-label>Small </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="medium" class="medium">
+              <ion-label>Medium </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="large" class="large">
+              <ion-label>Large </ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-col>
+      </ion-row>
+      <ion-label position="stacked" class="form-label pl-3 mt-2" color="tertiary">Upload image</ion-label>
+      <ion-row class="pa-3">
+        <ion-col>
+          <ion-item lines="none" (click)="takePhoto()" class="imagecontainer" color="primary">
+            <ion-input placeholder="Capture a photo" readonly="true"></ion-input>
+            <ion-button slot="end" fill="clear" color="dark">
+              <ion-icon name="photos" color="secondary"></ion-icon>
+            </ion-button>
+            <div *ngIf="image">
+              <img [src]="image" />
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-label position="stacked" class="form-label mt-3 pl-3" color="tertiary">Parcel description</ion-label>
+      <ion-row class="pa-3">
+        <ion-col class="ma-0 pa-0" color="primary">
+          <ion-input formControlName="description" placeholder="Short description (e.g: Cellphone, T-shirt)" class="form-input  pl-1 pr-1"
+            color="primary">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngIf="forms.get('description').errors && (forms.get('description').touched || forms.get('description').dirty)"
+          class="errormessage">
+          Please enter parcel's description.
+        </ion-col>
+      </ion-row>
+      <!-- Pick-up information -->
+      <ion-label position="stacked" class="form-label mt-3 pl-3" color="tertiary">Pick-up information</ion-label>
+      <ion-row class="pl-3 pr-3 pt-3">
+        <ion-col size="6" class="ma-0 pa-0" color="primary">
+          <ion-input formControlName="senderName" placeholder="Full name of recipient" class="form-input  pl-1 pr-1 br" color="primary">
+          </ion-input>
+        </ion-col>
+        <ion-col size="6" class="ma-0 pa-0">
+          <ion-input formControlName="senderContact" type="number" placeholder="Contact number" class="form-input">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pa-3">
+        <ion-col class="ma-0 pa-0">
+          <ion-input readonly="true" type="text" [(ngModel)]="pickAddress" [ngModelOptions]="{standalone:true}" ngDefaultControl class="form-input"
+            (click)="presentModal('P')" placeholder="Pick-up address">
+            <ion-button slot="end" fill="clear" color="secondary" size="small">
+              <ion-icon name="pin"></ion-icon>
+            </ion-button>
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pl-3 pr-3 pb-3">
+        <ion-col class="ma-0 pa-0">
+          <ion-datetime formControlName="pickUpTime" min="{{minDate}}" max="{{maxDate}}" display-format="MMM DD YYYY , HH:mm " minuteValues="0"
+            hourValues="9,10,11,12,13,14,15,16,17" class="form-date" placeholder="Pick-up date and time">
+          </ion-datetime>
+        </ion-col>
+      </ion-row>
+      <!-- Error message when no pick-up date-->
+      <ion-row>
+        <ion-col *ngIf="forms.get('senderName').errors && (forms.get('senderName').touched || forms.get('senderName').dirty)" class="errormessage">
+          Please enter sender's name.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngIf="forms.get('senderContact').errors && (forms.get('senderContact').touched || forms.get('recepientContact').dirty)"
+          class="errormessage">
+          Please enter a valid contact number.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngIf="forms.get('pickUpTime').errors && (forms.get('pickUpTime').touched || forms.get('pickUpTime').dirty)" class="errormessage">
+          Please enter pick up time and date.
+        </ion-col>
+      </ion-row>
+
+
+      <!-- Error messages -->
+
+
+
+      <!-- Delivery information-->
+      <ion-label position="stacked" class="form-label pl-3 ">Delivery information</ion-label>
+      <ion-row class="pl-3 pr-3 pt-3">
+        <ion-col size="6" class="ma-0 pa-0" color="primary">
+          <ion-input formControlName="recepientName" placeholder="Full name of recipient" class="form-input  pl-1 pr-1 br" color="primary">
+          </ion-input>
+        </ion-col>
+        <ion-col size="6" class="ma-0 pa-0">
+          <ion-input formControlName="recepientContact" type="number" placeholder="Contact number" class="form-input">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pa-3">
+        <ion-col class="ma-0 pa-0">
+          <ion-input readonly="true" type="text" [(ngModel)]="delAddress" [ngModelOptions]="{standalone:true}" ngDefaultControl (click)="presentModal('D')"
+            class="form-input" placeholder="Delivery address">
+            <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+              <ion-icon name="pin"></ion-icon>
+            </ion-button>
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pl-3 pr-3 pb-3">
+        <ion-col class="ma-0 pa-0">
+          <ion-datetime formControlName="deliveryTime" min="{{minDate}}" max="{{maxDate}}" display-format="MMM DD YYYY , HH:mm " minuteValues="0"
+            hourValues="9,10,11,12,13,14,15,16,17" placeholder="Delivery date and time" class="form-date">
+          </ion-datetime>
+        </ion-col>
+      </ion-row>
+      <!-- Error message when no delivery date-->
+      <ion-row>
+        <ion-col *ngIf="forms.get('recepientName').errors && (forms.get('recepientName').touched || forms.get('recepientName').dirty)"
+          class="errormessage">
+          Please enter recepientName's name.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngIf="forms.get('recepientContact').errors && (forms.get('recepientContact').touched || forms.get('recepientContact').dirty)"
+          class="errormessage">
+          Please enter a valid contact number.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngIf="forms.get('deliveryTime').errors && (forms.get('deliveryTime').touched || forms.get('deliveryTime').dirty)"
+          class="errormessage">
+          Please enter delivery time and date.
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pa-1">
+        <ion-col class="test" size="6" offset="3">
+          <ion-checkbox (click)="toggleCOD()" class="checkbox"></ion-checkbox>
+          <ion-label color="secondary"> Cash on Delivery</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <!-- Remittance information -->
+      <ion-label position="stacked" class="form-label pl-3" color="tertiary" *ngIf="COD">Remittance information
+      </ion-label>
+      <ion-row *ngIf="COD" class="pl-3 pr-3 pt-3">
+        <ion-col size="6" class="ma-0 pa-0" color="primary">
+          <ion-input formControlName="CODName" placeholder="Full name of recipient" class="form-input  pl-1 pr-1 br" color="primary">
+          </ion-input>
+        </ion-col>
+        <ion-col size="6" class="ma-0 pa-0">
+          <ion-input formControlName="CODContact" type="number" placeholder="Contact number" class="form-input">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <!-- Error message when no recipient-->
+
+
+      <ion-row *ngIf="COD" class="pl-3 pr-3 pt-3">
+        <ion-col class="ma-0 pa-0">
+          <ion-input formControlName="itemVal" placeholder="Remittance value" type="number" maxlength="" class="form-input mt-1">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <!-- Error message when no contact number date-->
+
+      <ion-row>
+        <ion-col *ngIf="forms.get('CODName').errors && (forms.get('CODName').touched || forms.get('CODName').dirty)" class="errormessage">
+          Please enter cash recipient's name.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngIf="forms.get('CODContact').errors && (forms.get('CODContact').touched || forms.get('CODContact').dirty)" class="errormessage">
+          Please enter cash recipient's contact number.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngIf="forms.get('itemVal').errors && (forms.get('itemVal').touched || forms.get('itemVal').dirty)" class="errormessage">
+          Please enter the remittance value for the parcel.
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="COD" class="pl-3 pr-3 pt-3">
+        <ion-col class="ma-0 pa-0">
+          <ion-input readonly="true" type="text" [(ngModel)]="CODAddress" [ngModelOptions]="{standalone:true}" ngDefaultControl (click)="presentModal('C')"
+            class="form-input" placeholder="Remittance address">
+            <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+              <ion-icon name="pin"></ion-icon>
+            </ion-button>
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="COD" class="pl-3 pr-3 pt-3">
+        <ion-col class="ma-0 pa-0">
+          <ion-datetime formControlName="CODTime" min="{{minDate}}" max="{{maxDate}}" display-format="MMM DD YYYY , HH:mm " minuteValues="0"
+            hourValues="9,10,11,12,13,14,15,16,17" class="form-date mt-1" placeholder="Remittance delivery date and time">
+          </ion-datetime>
+        </ion-col>
+      </ion-row>
+
+      <!-- Error message when no remittance date and time -->
+      <ion-row>
+        <ion-col *ngIf="forms.get('CODTime').errors && (forms.get('CODTime').touched || forms.get('CODTime').dirty)" class="errormessage">
+          Please enter remittance date and time
+        </ion-col>
+      </ion-row>
+      <ion-button expand="full" color="tertiary" [disabled]="!forms.valid" type="submit">
+        PLACE ORDER
+      </ion-button>
+    </form>
+  </ion-grid>
+</ion-content>
+
+
+<!-- <ion-footer>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="4" class="ma-0 pa-0">
+                <ion-toolbar>
+                    <ion-label class="price">Price:</ion-label>
+                    <ion-label class="pa-1 price" style="color:#c45602;">10</ion-label>
+                </ion-toolbar>
+            </ion-col>
+            <ion-col size="8" class="ma-0 pa-0">
+                <ion-toolbar class="pa-0 ma-0">
+
+                </ion-toolbar>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer> -->

@@ -1,0 +1,25 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="tasks">
+      <ion-icon name="clipboard"></ion-icon>
+      <ion-label>Tasks</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="scheduled">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Scheduled</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="records">
+      <ion-icon name="time"></ion-icon>
+      <ion-label>Records</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="presentAlert()">
+      <ion-icon name="power"></ion-icon>
+      <ion-label>Logout</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>

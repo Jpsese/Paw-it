@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600i,700&display=swap");
+div.space {
+  height: 20%;
+}
+ion-img {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+ion-label {
+  z-index: 2;
+  color: rgb(70, 70, 70);
+  text-align: center;
+}
+ion-button.btn {
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 25px !important;
+}
+.errormessage {
+  color: rgb(240, 100, 100);
+  text-align: center;
+  font-size: 12px;
+}
+.form-input {
+  color: #4f5052;
+  border: 1px solid #cfcfcf;
+  background-color: #f9f9f9;
+  border-radius: 100px;
+  font-size: 15px;
+  width: 90%;
+  box-shadow: -1px -1px 23px -15px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  align-self: center;
+  height: 50px;
+  opacity: 0.8;
+}
+.form-label {
+  color: #5d280b;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}

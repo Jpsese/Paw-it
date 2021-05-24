@@ -1,0 +1,65 @@
+.split {
+    display: block;
+    padding-right: 1rem;
+    padding-left: 1rem; 
+}
+.split span {
+    display: block;
+    float: right;
+}
+img {
+    max-width: 4.5rem;
+    height: 100px;
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    display: flex;
+    font-size: 12px;
+    
+}
+tbody {
+    padding-right: 1rem; 
+}
+table td:first-child {
+    white-space: nowrap;
+}
+
+table td:nth-child(2) {
+   white-space: nowrap;
+}
+.scrollable {
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    transition: 0.3s;
+}
+/* width */
+::-webkit-scrollbar {
+    height: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #34421E; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .map {
+      height: 45vh;
+      margin: .5rem;
+  }
+  ion-toolbar {
+      padding-right: .3rem;
+  }

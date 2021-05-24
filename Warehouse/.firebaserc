@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "pawit-c3960"
+  },
+  "targets": {
+    "pawit-c3960": {
+      "hosting": {
+        "wh": [
+          "pawit-warehouse"
+        ]
+      }
+    }
+  }
+}

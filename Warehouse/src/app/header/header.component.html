@@ -1,0 +1,20 @@
+
+  <!-- <mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile colspan="2"><img src="../assets/images/new_brand_2.png" height="50px" width="140px">
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" class=""><button mat-button [routerLink]="['/dashboard']" routerDirection="root" routerLinkActive="active">Dashboard</button>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2"> <button mat-button [routerLink]="['/monitor-parcels']" routerDirection="root" routerLinkActive="active">Monitor
+        Parcels</button></mat-grid-tile>
+    <mat-grid-tile colspan="1"><button mat-button [routerLink]="['/parcels']" routerDirection="root" routerLinkActive="active">Parcels</button></mat-grid-tile>
+    <mat-grid-tile colspan="1"><button mat-button [routerLink]="['/couriers']" routerDirection="root" routerLinkActive="active">Couriers</button></mat-grid-tile>
+    <mat-grid-tile colspan="1"><button mat-button [routerLink]="['/report']" routerDirection="root" routerLinkActive="active">Report</button></mat-grid-tile>
+  </mat-grid-list> -->
+<mat-toolbar class="mat-elevation-z1"><img src="../assets/images/new_brand_2.png" height="50px" width="140px">
+  <!-- <button mat-button [routerLink]="['/dashboard']" routerDirection="root" routerLinkActive="active">Dashboard</button> -->
+  <!-- <button mat-button [routerLink]="['/monitor-parcels']" routerDirection="root" routerLinkActive="active">Dashboard</button> -->
+  <button mat-button [routerLink]="['/parcels']" routerDirection="root" routerLinkActive="active">Dashboard</button>
+  <button mat-button [routerLink]="['/couriers']" routerDirection="root" routerLinkActive="active">Delivery run</button>
+  <span class="spacer"></span>
+  <button mat-button (click)="logout()">Logout</button>
+</mat-toolbar>

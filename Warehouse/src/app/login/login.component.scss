@@ -1,0 +1,28 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.login-form {
+  width: 100%;
+  margin-right: 8px;
+}
+
+.input-full-width {
+  width: 100%;
+}
+
+button {
+  background-color: #34421E;
+  color: #fff;
+}

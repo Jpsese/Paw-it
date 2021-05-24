@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html, body {
+  height: calc(100% - 50px); //50px (height of header)
+  margin: 0;
+  padding: 0;
+}
+
+// padding and margin utilities
+$spacings: 0, 4, 8, 16, 24, 48;
+@each $px in $spacings {
+  $i: index($spacings, $px);
+  .pa-#{$i - 1} {
+    padding: #{nth($spacings, $i)}px !important;
+  }
+  .pl-#{$i - 1} {
+    padding-left: #{nth($spacings, $i)}px !important;
+  }
+  .pr-#{$i - 1} {
+    padding-right: #{nth($spacings, $i)}px !important;
+  }
+  .pt-#{$i - 1} {
+    padding-top: #{nth($spacings, $i)}px !important;
+  }
+  .pb-#{$i - 1} {
+    padding-bottom: #{nth($spacings, $i)}px !important;
+  }
+  .ma-#{$i - 1} {
+    margin: #{nth($spacings, $i)}px !important;
+  }
+  .ml-#{$i - 1} {
+    margin-left: #{nth($spacings, $i)}px !important;
+  }
+  .mr-#{$i - 1} {
+    margin-right: #{nth($spacings, $i)}px !important;
+  }
+  .mt-#{$i - 1} {
+    margin-top: #{nth($spacings, $i)}px !important;
+  }
+  .mb-#{$i - 1} {
+    margin-bottom: #{nth($spacings, $i)}px !important;
+  }
+}

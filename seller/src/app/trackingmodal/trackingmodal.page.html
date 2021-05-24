@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button (click)="dismiss()" slot="start" fill="clear" color="secondary" size="small">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-item lines="none">
+      <ion-icon name="radio-button-off" color="secondary"></ion-icon>
+      <ion-input placeholder="Tracking #:" value="{{parcel.details.parcelID}}"></ion-input>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color=primary>
+  <div class="map">
+    <div class="head">
+      <h5>Status: </h5>
+      <p>{{parcel.currentStatus}}</p>
+    </div>
+    <h5 class="title">Parcel Logs </h5>
+    <ion-card class="card" *ngFor="let log of logs">
+      <p>Date: {{log.date}}</p>
+      <p>Time: {{log.time}}</p>
+      <p>Remark: {{log.remarks.remarks}}</p>
+    </ion-card>
+  </div>
+</ion-content>

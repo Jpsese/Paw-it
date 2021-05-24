@@ -1,0 +1,48 @@
+.split {
+    display: block;
+    padding-right: 1rem;
+    padding-left: 1rem; 
+}
+.split span {
+    display: block;
+    float: right;
+}
+ion-card-content p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-img {
+  width: 20% !important;
+
+}
+
+.empty-msg {
+  text-align: center;
+}
+
+.done {
+  border: 2px solid #34421E;
+}
+
+.failed {
+  border: 2px solid rgb(205, 53, 32);
+}
+
+.inProgress {
+  border: 2px solid #c19434;
+}

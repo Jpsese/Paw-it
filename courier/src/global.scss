@@ -1,0 +1,111 @@
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+$spacings: 0,
+4,
+8,
+16,
+24,
+48;
+
+@each $px in $spacings {
+  $i: index($spacings, $px);
+
+  .pa-#{$i - 1} {
+    padding: #{nth($spacings, $i)}px !important;
+  }
+
+  .pl-#{$i - 1} {
+    padding-left: #{nth($spacings, $i)}px !important;
+  }
+
+  .pr-#{$i - 1} {
+    padding-right: #{nth($spacings, $i)}px !important;
+  }
+
+  .pt-#{$i - 1} {
+    padding-top: #{nth($spacings, $i)}px !important;
+  }
+
+  .pb-#{$i - 1} {
+    padding-bottom: #{nth($spacings, $i)}px !important;
+  }
+
+  .ma-#{$i - 1} {
+    margin: #{nth($spacings, $i)}px !important;
+  }
+
+  .ml-#{$i - 1} {
+    margin-left: #{nth($spacings, $i)}px !important;
+  }
+
+  .mr-#{$i - 1} {
+    margin-right: #{nth($spacings, $i)}px !important;
+  }
+
+  .mt-#{$i - 1} {
+    margin-top: #{nth($spacings, $i)}px !important;
+  }
+
+  .mb-#{$i - 1} {
+    margin-bottom: #{nth($spacings, $i)}px !important;
+  }
+}
+
+.offline-mode {
+  display: flex;
+  background-color: rgba(230, 3, 3, 0.5);
+  z-index: 10;
+  text-align: center;
+  color: white;
+  justify-content: center
+}
+
+.reportModal {
+  div[role="dialog"] {
+    height: 50%;
+    margin-top: 90%;
+  }
+}
+
+.custom-spinner {
+  --spinner-color: var(--ion-color-secondary, red) !important;
+}
+
+
+.picker-md .picker-prefix,
+.picker-md .picker-suffix,
+.picker-md .picker-opt.picker-opt-selected {
+    color: #34421E;
+    font-family: Roboto;
+    border-radius: 10px;
+    background-color: #C19434;
+}
+.picker-md .picker-opt {
+    color: #34421E;
+    font-family: Roboto;
+}
+.picker-md .picker-button,
+.picker-md .picker-button.activated {
+    color: #34421E;
+    font-family: Roboto;
+}
+
+.logout {
+  button {
+    color: #34421E !important;
+  }
+}
+
+.loading-spinner {
+  --spinner-color: #34421E !important;
+}

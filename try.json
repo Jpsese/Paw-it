@@ -1,0 +1,2334 @@
+{
+  "couriers" : {
+    "KzKyYxFzDbVzwziDd4haOSVajiD2" : {
+      "contactNumber" : "03789476134",
+      "dayOff" : "Thursday",
+      "email" : "markko@gmail.com",
+      "firstName" : "mark",
+      "lastName" : "ko",
+      "vehiclePlateNumber" : "AY 4321"
+    },
+    "dFLTrFxn1bhAck2Ijj7cHif0miv2" : {
+      "completed" : {
+        "07-21-2019" : {
+          "2" : {
+            "status" : true
+          }
+        },
+        "07-23-2019" : {
+          "2" : {
+            "status" : true
+          }
+        }
+      },
+      "contactNumber" : "0912345678",
+      "dayOff" : "Tuesday",
+      "email" : "lapulapu@gmail.com",
+      "firstName" : "Lapu",
+      "lastName" : "Lapu",
+      "routes" : {
+        "07-21-2019" : [ {
+          "COD" : 0,
+          "dispatched" : false,
+          "done" : true,
+          "parcelID" : "P06232019-2329781",
+          "status" : "pickUp",
+          "time" : "11:00",
+          "warehouse" : true
+        }, {
+          "COD" : 1,
+          "cash" : 2100,
+          "dispatched" : false,
+          "done" : true,
+          "parcelID" : "P06242019-0140765",
+          "status" : "pickUp",
+          "time" : "12:00",
+          "warehouse" : true
+        } ],
+        "07-22-2019" : [ {
+          "COD" : 1,
+          "cash" : 2100,
+          "dispatched" : false,
+          "done" : true,
+          "parcelID" : "P06242019-0140765",
+          "status" : "delivery",
+          "time" : "14:00",
+          "warehouse" : true
+        } ],
+        "07-23-2019" : [ {
+          "COD" : 0,
+          "dispatched" : true,
+          "done" : true,
+          "parcelID" : "P06232019-2329781",
+          "status" : "delivery",
+          "time" : "11:00",
+          "warehouse" : false
+        }, {
+          "COD" : 1,
+          "cash" : 2100,
+          "dispatched" : false,
+          "done" : true,
+          "parcelID" : "P06242019-0140765",
+          "status" : "remittance",
+          "time" : "12:00",
+          "warehouse" : false
+        } ],
+        "07-24-2019" : [ {
+          "COD" : 0,
+          "dispatched" : false,
+          "done" : false,
+          "parcelID" : "P06242019-0157368",
+          "reason" : "MIA recipient\n",
+          "status" : "delivery",
+          "time" : "16:00",
+          "warehouse" : true
+        }, {
+          "COD" : 0,
+          "dispatched" : false,
+          "done" : true,
+          "parcelID" : "P06242019-0157368",
+          "status" : "pickUp",
+          "time" : "09:00",
+          "warehouse" : true
+        }, {
+          "COD" : 0,
+          "dispatched" : false,
+          "done" : true,
+          "parcelID" : "P06242019-1017426",
+          "status" : "pickUp",
+          "time" : "14:00",
+          "warehouse" : true
+        } ],
+        "07-26-2019" : [ {
+          "COD" : 0,
+          "parcelID" : "P06242019-0110708",
+          "status" : "pickUp",
+          "time" : "10:00",
+          "warehouse" : false
+        } ],
+        "07-27-2019" : [ {
+          "COD" : 0,
+          "parcelID" : "P06242019-0133484",
+          "status" : "delivery",
+          "time" : "09:00",
+          "warehouse" : false
+        }, {
+          "COD" : 0,
+          "parcelID" : "P06242019-0110708",
+          "status" : "delivery",
+          "time" : "11:00",
+          "warehouse" : false
+        } ],
+        "07-29-2019" : [ {
+          "COD" : 0,
+          "dispatched" : true,
+          "parcelID" : "P06242019-0246096",
+          "status" : "delivery",
+          "time" : "09:00",
+          "warehouse" : false
+        } ],
+        "07-22-2019" : [ {
+          "dispatched" : false,
+          "warehouse" : true
+        } ]
+      },
+      "vehiclePlateNumber" : "AY-1234"
+    },
+    "iZUs0VrPJLh0m7EtEqaMUcFbAky2" : {
+      "contactNumber" : "09764985134",
+      "dayOff" : "Thursday",
+      "email" : "unosegundo@gmail.com",
+      "firstName" : "Uno",
+      "lastName" : "Segundo",
+      "vehiclePlateNumber" : "AY 2431"
+    },
+    "qdhR5xB6OHeoOWNbK6olsHw62Hy2" : {
+      "contactNumber" : "0987654321",
+      "dayOff" : "Monday",
+      "email" : "apolinariomabini@gmail.com",
+      "firstName" : "apolinario",
+      "lastName" : "Mabini",
+      "routes" : {
+        "07-25-2019" : [ {
+          "COD" : 0,
+          "parcelID" : "P06242019-1017426",
+          "status" : "delivery",
+          "time" : "16:00",
+          "warehouse" : false
+        }, {
+          "COD" : 0,
+          "parcelID" : "P06242019-0246096",
+          "status" : "pickUp",
+          "time" : "11:00",
+          "warehouse" : false
+        } ]
+      },
+      "vehiclePlateNumber" : "AY-0987"
+    },
+    "w8GaZIIQ5mbxXac8ylTLTu2w72T2" : {
+      "contactNumber" : "09789653287",
+      "dayOff" : "Friday",
+      "email" : "pakitootikap@gmail.com",
+      "firstName" : "Pakito",
+      "lastName" : "Otikap",
+      "vehiclePlateNumber" : "AY 6374"
+    }
+  },
+  "devices" : {
+    "courier" : {
+      "SuAP6lErlRbnXvTT1jUXVSGPI3a2" : {
+        "token" : "dT4_2l6WA5A:APA91bGlofcCCGupEHDQ47u7DxYRg5frOGaKbP5tHSelhmU-l1v9vxUNob-ovW8rfFTNLY7hVJs48hhoQJBbZvhsHFVg_BS0eWDYXulmwvSKfCNbHoMd6aFprzkN82KUhETwpu_ceeZW"
+      },
+      "WTnY0e7d83XhWzCGspwCm6JW2Us1" : {
+        "token" : "dT4_2l6WA5A:APA91bGlofcCCGupEHDQ47u7DxYRg5frOGaKbP5tHSelhmU-l1v9vxUNob-ovW8rfFTNLY7hVJs48hhoQJBbZvhsHFVg_BS0eWDYXulmwvSKfCNbHoMd6aFprzkN82KUhETwpu_ceeZW"
+      },
+      "dFLTrFxn1bhAck2Ijj7cHif0miv2" : {
+        "token" : "fUbysrbzSdM:APA91bECj8sCH39XXYMGurkoihGsA8tx5RoOFyvNZVpRg7oKz9OZ9QpvlBkKsSIFzUVfQnQYAGBR-ncsPjGmK3KuzXWZ_E8Ev_vYureNhMgDW8DwxAWEqjQMGpgrriqlagBlwxv4tfiX"
+      }
+    },
+    "seller" : {
+      "7UFRT3SmRZZyxYeWTyRFujmOXTp1" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "8DQokW0EqEZfCkae3bkBErCFkY22" : {
+        "token" : "fcJ2rSiu9jY:APA91bGmfapPMBkicqLujUYK7y1LQpOIO9xqS4InKjajFDlNEx3jJcxwrtb5OIkWjOeYYpJCdj6QLFJB2ZJXcuCPI4aJa3udZ52ntu9-n_8_Dcpj1M4dQREt9hGFvvL4wzz50M_UIFM8"
+      },
+      "DODBQA5f5SNl2vasVWdNPgEeGNh1" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "FufE02w01dhmJjm8BJDJtF0nt4A2" : {
+        "token" : "eio7DUrvTmE:APA91bGR7BQrvrfGHPQaE21L_Sn0LB5uvEVopAfE6K7fEbBVP-bnfKCrBv3oTDLPniGdUIYtysor_4DcRz7k-zgtjdilJCNYOmMdesj8Ho06iz1DMyk_PfKijRNeZoV4ccn0A7GBdabV"
+      },
+      "GWMA5T2mH5We65537vTNxtlZtTm2" : {
+        "token" : "dXnP8y1e2-U:APA91bHKkKCRYvH0mVFa82eb1ndhI6z9NaN817sCogkBFKTZy0oy7rFT3DiZBGSoZJrPcmmOj4WOs20a4b94hCXc13yR61XAzkYgdxDZu6T8Io3tHQGlcC1QQG702tZrOdhUFPbxf1zG"
+      },
+      "N6soDgALmTb7mO7EoaW7ALsfq6u2" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "QCI1sMsUM5hz1Q8eCYieK8l8lG52" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "QdWxDSRuDDcc44kLdz0sENucbOH3" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "S8NPtM5e1fWh4yIWHAxBOrgTz5G3" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "SuAP6lErlRbnXvTT1jUXVSGPI3a2" : {
+        "token" : "fSNrt74mHtM:APA91bGPdECFsQbGSsw4zSD6yGU1LF4fsBsb1mc-LgH4VuiCgw0uuQpLy5J4gc9O2QmRzJn3ZuelWqRlp8-tiiUxT0hsj6PnYIrdcSocq9b1keBuF5J1O0-yAY-ImALILw5jXoIjKLz8"
+      },
+      "WTnY0e7d83XhWzCGspwCm6JW2Us1" : {
+        "token" : "fcJ2rSiu9jY:APA91bGmfapPMBkicqLujUYK7y1LQpOIO9xqS4InKjajFDlNEx3jJcxwrtb5OIkWjOeYYpJCdj6QLFJB2ZJXcuCPI4aJa3udZ52ntu9-n_8_Dcpj1M4dQREt9hGFvvL4wzz50M_UIFM8"
+      },
+      "WfWjAyDIRChhq5ZBTFwYItjbU5h2" : {
+        "token" : "e7pR6aQijWY:APA91bEmzdy6Czw8GVCniI2R3GGTQ6q9XckcrNk1TBTPJ1PLZfNymfljewGOKB2L7KR1Zp0qvmI0s8ilTt4Sp4EumfVY9f06qVhV7qyDJFh_jBB9kZj6X-UQWvOt6EAGITgZXOSXMB4F"
+      },
+      "ZRjhQAPgFQOEx33XDtgo6KIIAQv1" : {
+        "token" : "duLDzROJ3Qc:APA91bHEYT6tTFytexuC6pkDEP8V_7tSHXWT8HGNY5g1oJZTVJAO9dlePqY0yarJrmyoMFPAGMVSEAOmD2CMk4UMVUnAnxbjDAbxCtMXyqVOJdwOpN9LXd0vkjUY9DFP6Q-w3CGCeLQk"
+      },
+      "bbg6ag171GPWsiAiIIAK3TroKjf1" : {
+        "token" : "ccFKrNLTEaA:APA91bFc1tVCbHBRcRDCUVEfXM8j3uo5Fr5HEP-_mPlNoWm-VguveShk1hB2C2tUahtqfHdNoOuvBDWGIMnc0T7G6Eus9FHgqPZ0MgrV-OdAZnbaWK__0U-UoOwT2ZNwpgmbi78zGqhX"
+      },
+      "bcJheteJ21P7Hf9WcTgU76GaZ4f1" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "fUmS9ucWPRSp1YDIk2FIzUYRPtF3" : {
+        "token" : "eWb-aaKRBcU:APA91bEc2Nd8synOSiKbOlnCLiddryy7VNEoWiptxzVxuRJ0Sn1yBomdJGdcueQg1bnHfg7VRfyx6sgcEBw-IKV-1uAycbl42g05qcheiUJnZlcTc1MmnE3nDqUmR10NPCAO1SApcc5L"
+      },
+      "fw2IMWcoAERqm1jQvINQsHzXjRi1" : {
+        "token" : "dkA7-s8X_RQ:APA91bEdCt8V3LoldTbeSQf_OsHosuXo1xQUkS8ZLKHUOOMzGmxcdpFYNKb-40nRR7RSHcTxvelmpLfFX3mDYRZ8xxzP_zExbmjWNMs05vXPMH3BRDFOpT2ujazn7MBOq9PcpCC8trDL"
+      },
+      "heq2VTAQcSU1SNii85SQS8u29Zo2" : {
+        "token" : "fcJ2rSiu9jY:APA91bGmfapPMBkicqLujUYK7y1LQpOIO9xqS4InKjajFDlNEx3jJcxwrtb5OIkWjOeYYpJCdj6QLFJB2ZJXcuCPI4aJa3udZ52ntu9-n_8_Dcpj1M4dQREt9hGFvvL4wzz50M_UIFM8"
+      },
+      "j2iblI30OShQO1h3W8pz0E2YFf03" : {
+        "token" : "fSNrt74mHtM:APA91bGPdECFsQbGSsw4zSD6yGU1LF4fsBsb1mc-LgH4VuiCgw0uuQpLy5J4gc9O2QmRzJn3ZuelWqRlp8-tiiUxT0hsj6PnYIrdcSocq9b1keBuF5J1O0-yAY-ImALILw5jXoIjKLz8"
+      },
+      "o9qhdHpsPDZyfuI9xUB8WwxYrLc2" : {
+        "token" : "fcJ2rSiu9jY:APA91bGmfapPMBkicqLujUYK7y1LQpOIO9xqS4InKjajFDlNEx3jJcxwrtb5OIkWjOeYYpJCdj6QLFJB2ZJXcuCPI4aJa3udZ52ntu9-n_8_Dcpj1M4dQREt9hGFvvL4wzz50M_UIFM8"
+      },
+      "tiorAGovQAUplGs0a54fFRDWtT33" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "uB8rz77otUOuOdrOjrwD29jJ4ku2" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "viQSoWrG3IU9IvtpGZVVLFIp9VP2" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "wHM5vC97MNQIonzJnbPchW90PyK2" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "xPjBRQpFQgNW6RipLDddN77oewm2" : {
+        "token" : "eG7c9welHHA:APA91bHuaPQ5LdEH4w1ruoErkWva7Cetm-2ek1FVhv0NRDkZQqtefBSc3FRthXiKqz3j9VGBpVUbodwRPfVuv95qs63QCvjxUQ_FfBt0kXNX7O8pCHdR31BS_mAQMhA9n1eA-G8f0tem"
+      },
+      "z4eXQpONQjdxNgLXns4IRE3Hp0Z2" : {
+        "token" : "ccFKrNLTEaA:APA91bFc1tVCbHBRcRDCUVEfXM8j3uo5Fr5HEP-_mPlNoWm-VguveShk1hB2C2tUahtqfHdNoOuvBDWGIMnc0T7G6Eus9FHgqPZ0MgrV-OdAZnbaWK__0U-UoOwT2ZNwpgmbi78zGqhX"
+      },
+      "zy5h9tlLxpP1R9rW6ZtsyjPZh2C3" : {
+        "token" : "fcJ2rSiu9jY:APA91bGmfapPMBkicqLujUYK7y1LQpOIO9xqS4InKjajFDlNEx3jJcxwrtb5OIkWjOeYYpJCdj6QLFJB2ZJXcuCPI4aJa3udZ52ntu9-n_8_Dcpj1M4dQREt9hGFvvL4wzz50M_UIFM8"
+      }
+    }
+  },
+  "employees" : {
+    "6pIfDJu5g7Xnnbul4USx2hCIvvI3" : {
+      "active" : true,
+      "date_registered" : "Thu, 20 Jun 2019 07:05:08 GMT",
+      "email" : "juanluna@gmail.com",
+      "first_name" : "Juan",
+      "last_name" : "Luna",
+      "role" : "Logistics Supervisor",
+      "updated_password" : false
+    },
+    "KzKyYxFzDbVzwziDd4haOSVajiD2" : {
+      "active" : true,
+      "date_registered" : "Mon, 24 Jun 2019 06:08:46 GMT",
+      "email" : "markko@gmail.com",
+      "first_name" : "mark",
+      "last_name" : "ko",
+      "role" : "Courier",
+      "updated_password" : false
+    },
+    "a9bJ8SinBEZ6fXbpTUvfX8ZuXK33" : {
+      "active" : true,
+      "date_registered" : "Thu, 20 Jun 2019 07:06:54 GMT",
+      "email" : "franciscobaltazar@gmail.com",
+      "first_name" : "Francisco",
+      "last_name" : "Baltazar",
+      "role" : "Help Desk Officer",
+      "updated_password" : false
+    },
+    "atniA8rUSbhg3q7rfjtP48xKoCH3" : {
+      "active" : true,
+      "date_registered" : "Sat, 22 Jun 2019 13:51:40 GMT",
+      "email" : "johndoe@gmail.com",
+      "first_name" : "John",
+      "last_name" : "Doe",
+      "role" : "Admin",
+      "updated_password" : false
+    },
+    "dFLTrFxn1bhAck2Ijj7cHif0miv2" : {
+      "active" : true,
+      "date_registered" : "Sat, 22 Jun 2019 11:56:59 GMT",
+      "email" : "lapulapu@gmail.com",
+      "first_name" : "Lapu",
+      "last_name" : "Lapu",
+      "role" : "Courier",
+      "updated_password" : false
+    },
+    "iZUs0VrPJLh0m7EtEqaMUcFbAky2" : {
+      "active" : true,
+      "date_registered" : "Mon, 24 Jun 2019 06:12:31 GMT",
+      "email" : "unosegundo@gmail.com",
+      "first_name" : "Uno",
+      "last_name" : "Segundo",
+      "role" : "Courier",
+      "updated_password" : false
+    },
+    "pRTXgW7ZMhQ5uXjJtjSQuRa9xvB2" : {
+      "active" : true,
+      "date_registered" : "Thu, 20 Jun 2019 07:05:59 GMT",
+      "email" : "joserizal@gmail.com",
+      "first_name" : "Jose",
+      "last_name" : "Rizal",
+      "role" : "Warehouse Manager",
+      "updated_password" : false
+    },
+    "qdhR5xB6OHeoOWNbK6olsHw62Hy2" : {
+      "active" : true,
+      "date_registered" : "Sat, 22 Jun 2019 11:57:35 GMT",
+      "email" : "apolinariomabini@gmail.com",
+      "first_name" : "apolinario",
+      "last_name" : "Mabini",
+      "role" : "Courier",
+      "updated_password" : false
+    },
+    "w8GaZIIQ5mbxXac8ylTLTu2w72T2" : {
+      "active" : true,
+      "date_registered" : "Mon, 24 Jun 2019 06:16:49 GMT",
+      "email" : "pakitootikap@gmail.com",
+      "first_name" : "Pakito",
+      "last_name" : "Otikap",
+      "role" : "Courier",
+      "updated_password" : false
+    }
+  },
+  "postedParcels" : {
+    "P06232019-2329781" : {
+      "delivery" : {
+        "contact" : 9065543321,
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-23-2019",
+        "done" : true,
+        "location" : {
+          "address" : "146 Kisad Rd, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.40287485538218,
+          "lng" : 120.59599145969742
+        },
+        "name" : "Genrie Gayaso",
+        "time" : "11:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "06-19-2019",
+        "description" : "cap",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06232019-2329781/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06232019-2329781%2Fitem?alt=media&token=99b5268d-ecfb-4356-a151-d58821825899",
+        "parcelID" : "P06232019-2329781",
+        "pouchSize" : "small",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "completed",
+        "timePosted" : "23:32"
+      },
+      "logs" : {
+        "06-20-2019_08:22" : {
+          "remarks" : "Request has been assigned"
+        },
+        "07-21-2019_09:13" : {
+          "remarks" : "Parcel has been picked up by Lapu Lapu"
+        },
+        "07-21-2019_10:50" : {
+          "remarks" : "Parcel has been stored to warehouse"
+        },
+        "07-23-2019_10:45" : {
+          "remarks" : "Parcel has been dispatched"
+        },
+        "07-23-2019_11:18" : {
+          "remarks" : "Parcel has been delivered by Lapu Lapu"
+        },
+        "07-22-2019_22:25" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-22-2019_22:26" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-22-2019_22:29" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-22-2019_22:40" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-23-2019_14:05" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-23-2019_14:06" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-23-2019_14:08" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-23-2019_21:37" : {
+          "remarks" : "parcel has been dispatch"
+        }
+      },
+      "pickUp" : {
+        "contact" : 9064381536,
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-21-2019",
+        "done" : true,
+        "location" : {
+          "address" : "PARK CIRCLE, Pacdal Cir, Baguio, Benguet, Philippines",
+          "lat" : 16.4163158,
+          "lng" : 120.6155933
+        },
+        "name" : "John Patrick Sese",
+        "time" : "09:00"
+      },
+      "status" : {
+        "activity" : "dispatched",
+        "status" : "delivery"
+      }
+    },
+    "P06232019-2351483" : {
+      "delivery" : {
+        "contact" : 9056683325,
+        "date" : "07-25-2019",
+        "location" : {
+          "address" : "Yellow Trail, Camp John Hay, Baguio, Benguet, Philippines",
+          "lat" : 16.397029,
+          "lng" : 120.61135990000002
+        },
+        "name" : "Laurence Aegi",
+        "time" : "12:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-24-2019",
+        "description" : "Tissue",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06232019-2351483/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06232019-2351483%2Fitem?alt=media&token=1bc68bac-6a23-4509-8a78-9d0ee24abea2",
+        "parcelID" : "P06232019-2351483",
+        "pouchSize" : "small",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "rejected",
+        "timePosted" : "00:02"
+      },
+      "error" : [ "Inappropriate pouch size for parcel", "Perilous Location" ],
+      "logs" : {
+        "07-24-2019_00:05:" : {
+          "remarks" : "Request has been rejected by null"
+        }
+      },
+      "pickUp" : {
+        "contact" : "09064381535",
+        "date" : "07-24-2019",
+        "location" : {
+          "address" : "8 Magsaysay Ave, Baguio, 2602 Benguet, Philippines",
+          "lat" : 16.4152476,
+          "lng" : 120.59554739999999
+        },
+        "name" : "John Patrick Sese",
+        "time" : "09:00"
+      },
+      "remittance" : {
+        "cash" : 80,
+        "contact" : "09064381535",
+        "date" : "07-26-2019",
+        "location" : {
+          "address" : "8 Magsaysay Ave, Baguio, 2602 Benguet, Philippines",
+          "lat" : 16.4152476,
+          "lng" : 120.59554739999999
+        },
+        "name" : "John Patrick Sese",
+        "time" : "09:00"
+      }
+    },
+    "P06242019-0110708" : {
+      "delivery" : {
+        "contact" : 9126576496,
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-27-2019",
+        "location" : {
+          "address" : "40 Easter Rd, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.42344314590321,
+          "lng" : 120.58929921762675
+        },
+        "name" : "Kyle Torres",
+        "time" : "11:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-24-2019",
+        "description" : "Nail cutter",
+        "imgPath" : "ZRjhQAPgFQOEx33XDtgo6KIIAQv1/P06242019-0110708/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/ZRjhQAPgFQOEx33XDtgo6KIIAQv1%2FP06242019-0110708%2Fitem?alt=media&token=848613e1-0dbb-4c09-9d80-a657ed7f8adc",
+        "parcelID" : "P06242019-0110708",
+        "pouchSize" : "small",
+        "sellerID" : "ZRjhQAPgFQOEx33XDtgo6KIIAQv1",
+        "status" : "assigned",
+        "timePosted" : "01:10"
+      },
+      "logs" : {
+        "07-24-2019_13:48:" : {
+          "remarks" : "Request has been accepted by null."
+        }
+      },
+      "pickUp" : {
+        "contact" : "09123419764",
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-26-2019",
+        "location" : {
+          "address" : "EDY Building, 144 Kisad Rd, Burnham - Legarda Barangay, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.40316589838517,
+          "lng" : 120.5953328403818
+        },
+        "name" : "Genrie Gayaso",
+        "time" : "10:00"
+      }
+    },
+    "P06242019-0125430" : {
+      "delivery" : {
+        "contact" : 9121476341,
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "Bokawkan, Baguio, Benguet, Philippines",
+          "lat" : 16.419388726426877,
+          "lng" : 120.58916130675078
+        },
+        "name" : "Mark Kram",
+        "time" : "09:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-24-2019",
+        "description" : "Remote ",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06242019-0125430/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-0125430%2Fitem?alt=media&token=7650df83-e05f-4911-b145-8a72f273fb40",
+        "parcelID" : "P06242019-0125430",
+        "pouchSize" : "small",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "pending",
+        "timePosted" : "01:25"
+      },
+      "pickUp" : {
+        "contact" : "09064381535",
+        "date" : "07-27-2019",
+        "location" : {
+          "address" : "8988 Gov. Pack Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.404619136328122,
+          "lng" : 120.59660814714456
+        },
+        "name" : "John Patrick Sese",
+        "time" : "11:00"
+      }
+    },
+    "P06242019-0133484" : {
+      "delivery" : {
+        "contact" : 9761276431,
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-27-2019",
+        "location" : {
+          "address" : "Dreamland Subdivisision, Baguio, Benguet, Philippines",
+          "lat" : 16.432434587147178,
+          "lng" : 120.58449478142786
+        },
+        "name" : "John Snow",
+        "time" : "09:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-24-2019",
+        "description" : "Fly zapper",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06242019-0133484/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-0133484%2Fitem?alt=media&token=4bed4433-b064-41c0-90e8-d004c31a9072",
+        "parcelID" : "P06242019-0133484",
+        "pouchSize" : "medium",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "retracted-pickUp",
+        "timePosted" : "01:33"
+      },
+      "logs" : {
+        "07-24-2019_13:15:" : {
+          "remarks" : "Request has been accepted by null."
+        },
+        "07-24-2019_14:15" : "This parcel's pickUp activity has been retracted from courier (Lapu Lapu) by null."
+      },
+      "pickUp" : {
+        "contact" : "09064381535",
+        "date" : "07-22-2019",
+        "location" : {
+          "address" : "Gov. Pack Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40436967205639,
+          "lng" : 120.59636635807192
+        },
+        "name" : "John Patrick Sese",
+        "time" : "15:00"
+      }
+    },
+    "P06242019-0140765" : {
+      "delivery" : {
+        "contact" : 9761246794,
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-22-2019",
+        "done" : true,
+        "location" : {
+          "address" : "07 Cuderaw Street, Bacoor, Loakan Proper, Baguio City, 2600, Benguet, Philippines",
+          "lat" : 16.396650842293823,
+          "lng" : 120.60693187394527
+        },
+        "name" : "Vincent Cruz",
+        "time" : "14:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "06-20-2019",
+        "description" : "Printer",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06242019-0140765/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-0140765%2Fitem?alt=media&token=c511c443-b7e1-45da-93a3-d7c585345013",
+        "parcelID" : "P06242019-0140765",
+        "pouchSize" : "large",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "completed",
+        "timePosted" : "01:40"
+      },
+      "logs" : {
+        "06-20-2019_9:10" : {
+          "remarks" : "Request has been assigned"
+        },
+        "07-21-2019_12:14" : {
+          "remarks" : "Parcel has been picked up by Lapu Lapu"
+        },
+        "07-21-2019_13:58" : {
+          "remarks" : "Parcel has been stored in warehouse"
+        },
+        "07-22-2019_10:34" : {
+          "remarks" : "Parcel has been dispatched"
+        },
+        "07-22-2019_14:04" : {
+          "remarks" : "Parcel has been delivered by Lapu Lapu"
+        },
+        "07-22-2019_14:29" : {
+          "remarks" : "Parcel has been stored in warehouse"
+        },
+        "07-23-2019_10:58" : {
+          "remarks" : "Parcel has been dispatched"
+        },
+        "07-23-2019_12:12" : {
+          "remarks" : "Parcel has been remitted"
+        },
+        "07-22-2019_22:29" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-22-2019_22:40" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-22-2019_22:54" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-23-2019_14:06" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-23-2019_14:11" : {
+          "remarks" : "parcel has been stored to warehouse"
+        }
+      },
+      "pickUp" : {
+        "contact" : "09064381535",
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-21-2019",
+        "done" : true,
+        "location" : {
+          "address" : "146 Kisad Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.403276862840464,
+          "lng" : 120.59602640886314
+        },
+        "name" : "John Patrick Sese",
+        "time" : "12:00"
+      },
+      "remittance" : {
+        "cash" : 2100,
+        "contact" : "09064381535",
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-23-2019",
+        "done" : true,
+        "location" : {
+          "address" : "146 Kisad Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.403422304836923,
+          "lng" : 120.59603155911152
+        },
+        "name" : "John Patrick Sese",
+        "time" : "12:00"
+      },
+      "status" : {
+        "activity" : "in-warehouse",
+        "status" : "delivery"
+      }
+    },
+    "P06242019-0157368" : {
+      "delivery" : {
+        "contact" : 9764421764,
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-24-2019",
+        "done" : false,
+        "location" : {
+          "address" : "36 Everlasting St, Baguio, Benguet, Philippines",
+          "lat" : 16.40693511555744,
+          "lng" : 120.58992589119934
+        },
+        "name" : "Jonel Cruz",
+        "reason" : "MIA recipient\n",
+        "time" : "16:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-22-2019",
+        "description" : "Duster",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06242019-0157368/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-0157368%2Fitem?alt=media&token=a6872188-f6a4-4ccc-bf7b-7efe9283ca95",
+        "parcelID" : "P06242019-0157368",
+        "pouchSize" : "medium",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "undelivered",
+        "timePosted" : "01:57"
+      },
+      "logs" : {
+        "07-24-2019_11:41" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-24-2019_12:11:" : {
+          "remarks" : "Request has been accepted by null."
+        },
+        "07-24-2019_12:12" : {
+          "remarks" : "Parcel has been picked up by Lapu Lapu"
+        },
+        "07-24-2019_12:51" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-24-2019_14:18" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-24-2019_14:22" : {
+          "remarks" : "parcel has been dispatch"
+        },
+        "07-24-2019_14:23" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-24-2019_14:38" : {
+          "remarks" : "parcel has been stored to warehouse"
+        }
+      },
+      "pickUp" : {
+        "contact" : "09064381535",
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-24-2019",
+        "done" : true,
+        "location" : {
+          "address" : "146 Kisad Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.403443731741387,
+          "lng" : 120.5960097717074
+        },
+        "name" : "John Patrick Sese",
+        "signUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-0157368%2FpickUpSignature?alt=media&token=dc120043-ef58-404a-8299-be3a925755dd",
+        "time" : "09:00"
+      },
+      "status" : {
+        "activity" : "in-warehouse",
+        "status" : "delivery"
+      }
+    },
+    "P06242019-0246096" : {
+      "delivery" : {
+        "contact" : 9461276943,
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-29-2019",
+        "location" : {
+          "address" : "10 Golden Shower Street, Quezon Hill Proper, Baguio City, Benguet, Philippines",
+          "lat" : 16.429155360737916,
+          "lng" : 120.59279313338122
+        },
+        "name" : "Uno Segundo III",
+        "time" : "09:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-21-2019",
+        "description" : "Stuffed toy",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06242019-0246096/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-0246096%2Fitem?alt=media&token=7013664d-5a3a-4d01-8825-e7a1d2fb9d27",
+        "parcelID" : "P06242019-0246096",
+        "pouchSize" : "medium",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "assigned",
+        "timePosted" : "02:46"
+      },
+      "logs" : {
+        "07-24-2019_13:01:" : {
+          "remarks" : "Request has been accepted by null."
+        }
+      },
+      "pickUp" : {
+        "contact" : "09064381535",
+        "courier" : "qdhR5xB6OHeoOWNbK6olsHw62Hy2",
+        "date" : "07-25-2019",
+        "location" : {
+          "address" : "115 Lower Brookside, Baguio, Benguet, Philippines",
+          "lat" : 16.41710566389588,
+          "lng" : 120.60726155446004
+        },
+        "name" : "John Patrick Sese",
+        "time" : "11:00"
+      },
+      "status" : {
+        "activity" : "dispatched",
+        "status" : "delivery"
+      }
+    },
+    "P06242019-1017426" : {
+      "delivery" : {
+        "contact" : 9764176914,
+        "courier" : "qdhR5xB6OHeoOWNbK6olsHw62Hy2",
+        "date" : "07-25-2019",
+        "location" : {
+          "address" : "19 Malvar St, Baguio, Benguet, Philippines",
+          "lat" : 16.4246173,
+          "lng" : 120.5991335
+        },
+        "name" : "Juan Snow",
+        "time" : "16:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "06-20-2019",
+        "description" : "Charger adapter",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06242019-1017426/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-1017426%2Fitem?alt=media&token=b05c1511-42f2-4292-97a8-a0f770a7f147",
+        "parcelID" : "P06242019-1017426",
+        "pouchSize" : "small",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "undelivered",
+        "timePosted" : "10:17"
+      },
+      "logs" : {
+        "07-21-2019_12:56" : {
+          "remarks" : "Request has been accepted by null"
+        },
+        "07-22-2019_15:25" : {
+          "remarks" : "Seller was not found"
+        },
+        "07-24-2019_14:19" : {
+          "remarks" : "parcel has been stored to warehouse"
+        },
+        "07-24-2019_14:21" : {
+          "remarks" : "Parcel has been picked up by Lapu Lapu"
+        }
+      },
+      "pickUp" : {
+        "contact" : "09064381535",
+        "courier" : "dFLTrFxn1bhAck2Ijj7cHif0miv2",
+        "date" : "07-22-2019",
+        "done" : true,
+        "location" : {
+          "address" : "18 Bakakeng Rd, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.3829466,
+          "lng" : 120.59285539999996
+        },
+        "name" : "John Patrick Sese",
+        "reason" : "Seller was not found",
+        "signUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-1017426%2FpickUpSignature?alt=media&token=36c979c0-e576-4d42-8b95-8781c1646c2c",
+        "time" : "14:00"
+      },
+      "status" : {
+        "activity" : "pickUp"
+      }
+    },
+    "P06242019-1403975" : {
+      "delivery" : {
+        "contact" : 9764116342,
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "171 Military Cutoff Rd, Baguio, 2602 Benguet, Philippines",
+          "lat" : 16.401840253215976,
+          "lng" : 120.59759497929096
+        },
+        "name" : "Mark Ko",
+        "time" : "14:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-24-2019",
+        "description" : "Mouse",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06242019-1403975/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-1403975%2Fitem?alt=media&token=a1321cbb-53d2-4dee-8974-2a0876d28bbb",
+        "parcelID" : "P06242019-1403975",
+        "pouchSize" : "small",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "pending",
+        "timePosted" : "14:03"
+      },
+      "pickUp" : {
+        "contact" : "09064381535",
+        "date" : "07-26-2019",
+        "location" : {
+          "address" : "143 Kisad Rd, Burnham - Legarda Barangay, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.403928954723813,
+          "lng" : 120.5950306929423
+        },
+        "name" : "John Patrick Sese",
+        "time" : "13:00"
+      }
+    },
+    "P06242019-1405115" : {
+      "delivery" : {
+        "contact" : 9123416764,
+        "date" : "07-26-2019",
+        "location" : {
+          "address" : "Gov. Pack Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.402461601818878,
+          "lng" : 120.59581833874392
+        },
+        "name" : "Mark",
+        "time" : "09:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-24-2019",
+        "description" : "Phone",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06242019-1405115/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-1405115%2Fitem?alt=media&token=40b0a208-84c0-485f-a163-ebfd7f27f957",
+        "parcelID" : "P06242019-1405115",
+        "pouchSize" : "medium",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "pending",
+        "timePosted" : "14:05"
+      },
+      "pickUp" : {
+        "contact" : "09064381535",
+        "date" : "07-25-2019",
+        "location" : {
+          "address" : "Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.4023332,
+          "lng" : 120.59600709999995
+        },
+        "name" : "John Patrick Sese",
+        "time" : "09:00"
+      }
+    },
+    "P06242019-1405259" : {
+      "delivery" : {
+        "contact" : 9123416764,
+        "date" : "07-26-2019",
+        "location" : {
+          "address" : "Gov. Pack Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.402461601818878,
+          "lng" : 120.59581833874392
+        },
+        "name" : "Mark",
+        "time" : "09:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-24-2019",
+        "description" : "Phone charger",
+        "imgPath" : "QdWxDSRuDDcc44kLdz0sENucbOH3/P06242019-1405259/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QdWxDSRuDDcc44kLdz0sENucbOH3%2FP06242019-1405259%2Fitem?alt=media&token=c2350205-b007-490b-b309-26bbb355e145",
+        "parcelID" : "P06242019-1405259",
+        "pouchSize" : "small",
+        "sellerID" : "QdWxDSRuDDcc44kLdz0sENucbOH3",
+        "status" : "pending",
+        "timePosted" : "14:05"
+      },
+      "pickUp" : {
+        "contact" : "09064381535",
+        "date" : "07-25-2019",
+        "location" : {
+          "address" : "Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.4023332,
+          "lng" : 120.59600709999995
+        },
+        "name" : "John Patrick Sese",
+        "time" : "09:00"
+      }
+    },
+    "P07022019-1901752" : {
+      "delivery" : {
+        "contact" : 9623261954,
+        "date" : "07-23-2019",
+        "location" : {
+          "address" : "Convention Center Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40432651457982,
+          "lng" : 120.59975577099664
+        },
+        "name" : "Allezandrea Penetrante",
+        "time" : "09:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-21-2019",
+        "description" : "Remote Control",
+        "imgPath" : "fUmS9ucWPRSp1YDIk2FIzUYRPtF3/P07022019-1901752/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/fUmS9ucWPRSp1YDIk2FIzUYRPtF3%2FP07022019-1901752%2Fitem?alt=media&token=2cefb559-d8f3-4c36-a0fe-fd7c2396cc6f",
+        "parcelID" : "P07022019-1901752",
+        "pouchSize" : "large",
+        "sellerID" : "fUmS9ucWPRSp1YDIk2FIzUYRPtF3",
+        "status" : "pending",
+        "timePosted" : "19:01"
+      },
+      "pickUp" : {
+        "contact" : "09959903035",
+        "date" : "07-22-2019",
+        "location" : {
+          "address" : "146 Kisad Rd, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.40276873289434,
+          "lng" : 120.59552572807543
+        },
+        "name" : "Bruno Martinez",
+        "time" : "09:00"
+      },
+      "remittance" : {
+        "cash" : 600,
+        "contact" : "09959903035",
+        "date" : "07-24-2019",
+        "location" : {
+          "address" : "144 Kisad Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40306564631659,
+          "lng" : 120.5954511072768
+        },
+        "name" : "Bruno Martinez",
+        "time" : "10:00"
+      }
+    },
+    "P07152019-0755386" : {
+      "delivery" : {
+        "contact" : 9845167325,
+        "date" : "07-27-2019",
+        "location" : {
+          "address" : "16 New Lucban Rd, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.421248034947027,
+          "lng" : 120.59680515763141
+        },
+        "name" : "CM Gutierrez",
+        "time" : "11:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-25-2019",
+        "description" : "Figurine",
+        "imgPath" : "z4eXQpONQjdxNgLXns4IRE3Hp0Z2/P07152019-0755386/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/z4eXQpONQjdxNgLXns4IRE3Hp0Z2%2FP07152019-0755386%2Fitem?alt=media&token=728b3c1b-6968-495d-a837-6b5b15dafb73",
+        "parcelID" : "P07152019-0755386",
+        "pouchSize" : "small",
+        "sellerID" : "z4eXQpONQjdxNgLXns4IRE3Hp0Z2",
+        "status" : "pending",
+        "timePosted" : "07:55"
+      },
+      "pickUp" : {
+        "contact" : "09987654321",
+        "date" : "07-26-2019",
+        "location" : {
+          "address" : "143 Kisad Rd, Burnham - Legarda Barangay, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.404273678711256,
+          "lng" : 120.59519087128277
+        },
+        "name" : "Ethelyn Vitorio",
+        "time" : "09:00"
+      }
+    },
+    "P07152019-0758060" : {
+      "delivery" : {
+        "contact" : 9845167325,
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "16 New Lucban Rd, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.421248034947027,
+          "lng" : 120.59680515763148
+        },
+        "name" : "CM Gutierrez",
+        "time" : "10:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-25-2019",
+        "description" : "Figurine",
+        "imgPath" : "z4eXQpONQjdxNgLXns4IRE3Hp0Z2/P07152019-0758060/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/z4eXQpONQjdxNgLXns4IRE3Hp0Z2%2FP07152019-0758060%2Fitem?alt=media&token=68a0ea31-8b3f-4f29-ae79-60a665be93ff",
+        "parcelID" : "P07152019-0758060",
+        "pouchSize" : "small",
+        "sellerID" : "z4eXQpONQjdxNgLXns4IRE3Hp0Z2",
+        "status" : "pending",
+        "timePosted" : "07:58"
+      },
+      "pickUp" : {
+        "contact" : "09987654321",
+        "date" : "07-27-2019",
+        "location" : {
+          "address" : "143 Kisad Rd, Burnham - Legarda Barangay, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.403867283115723,
+          "lng" : 120.59496361093714
+        },
+        "name" : "Ethelyn Vitorio",
+        "time" : "11:00"
+      },
+      "remittance" : {
+        "cash" : 500,
+        "contact" : "09987654321",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "146 Kisad Rd, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.402876260049222,
+          "lng" : 120.59558201108483
+        },
+        "name" : "Ethelyn Vitorio",
+        "time" : "12:00"
+      }
+    },
+    "P07152019-0800389" : {
+      "delivery" : {
+        "contact" : 9845167325,
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "14 New Lucban Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.42105263657869,
+          "lng" : 120.59686007137543
+        },
+        "name" : "Bruno Martinez",
+        "time" : "16:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-25-2019",
+        "description" : "Laptop",
+        "imgPath" : "z4eXQpONQjdxNgLXns4IRE3Hp0Z2/P07152019-0800389/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/z4eXQpONQjdxNgLXns4IRE3Hp0Z2%2FP07152019-0800389%2Fitem?alt=media&token=fac9259d-a9ac-4d96-bbec-0ce16cdd7cf6",
+        "parcelID" : "P07152019-0800389",
+        "pouchSize" : "large",
+        "sellerID" : "z4eXQpONQjdxNgLXns4IRE3Hp0Z2",
+        "status" : "pending",
+        "timePosted" : "08:00"
+      },
+      "pickUp" : {
+        "contact" : "09987654321",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "143 Kisad Rd, Burnham - Legarda Barangay, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.403867283115723,
+          "lng" : 120.59496361093714
+        },
+        "name" : "Ethelyn Vitorio",
+        "time" : "09:00"
+      },
+      "remittance" : {
+        "cash" : 500,
+        "contact" : "09987654321",
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "146 Kisad Rd, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.402876260049222,
+          "lng" : 120.59558201108484
+        },
+        "name" : "Ethelyn Vitorio",
+        "time" : "14:00"
+      }
+    },
+    "P07152019-0851747" : {
+      "delivery" : {
+        "contact" : 9987654321,
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "20 Marcos Hi-way, Baguio City 2600, Philippines",
+          "lat" : 16.400343753157316,
+          "lng" : 120.59059867945709
+        },
+        "name" : "Earl Rimando",
+        "time" : "16:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-25-2019",
+        "description" : "TV Remote",
+        "imgPath" : "z4eXQpONQjdxNgLXns4IRE3Hp0Z2/P07152019-0851747/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/z4eXQpONQjdxNgLXns4IRE3Hp0Z2%2FP07152019-0851747%2Fitem?alt=media&token=7a34c5aa-29e2-4213-b3cf-b3fc374a91d3",
+        "parcelID" : "P07152019-0851747",
+        "pouchSize" : "small",
+        "sellerID" : "z4eXQpONQjdxNgLXns4IRE3Hp0Z2",
+        "status" : "pending",
+        "timePosted" : "08:51"
+      },
+      "pickUp" : {
+        "contact" : "09987654321",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "143 Kisad Rd, Burnham - Legarda Barangay, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.403722464452006,
+          "lng" : 120.59518842915263
+        },
+        "name" : "Ethelyn Vitorio",
+        "time" : "11:00"
+      },
+      "remittance" : {
+        "cash" : 420,
+        "contact" : "09987654321",
+        "date" : "07-21-2019",
+        "location" : {
+          "address" : "EDY Building, 144 Kisad Rd, Burnham - Legarda Barangay, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.403072335680406,
+          "lng" : 120.5955086651961
+        },
+        "name" : "Ethelyn Vitorio",
+        "time" : "15:00"
+      }
+    },
+    "P07152019-0853035" : {
+      "delivery" : {
+        "contact" : 9987654321,
+        "date" : "07-21-2019",
+        "location" : {
+          "address" : "20 Marcos Hi-way, Baguio City 2600, Philippines",
+          "lat" : 16.400343753157316,
+          "lng" : 120.59059867945709
+        },
+        "name" : "Earl Rimando",
+        "time" : "17:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-25-2019",
+        "description" : "Mug (Guitar design)",
+        "imgPath" : "z4eXQpONQjdxNgLXns4IRE3Hp0Z2/P07152019-0853035/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/z4eXQpONQjdxNgLXns4IRE3Hp0Z2%2FP07152019-0853035%2Fitem?alt=media&token=89b84f7a-144a-4263-906a-a4dc322e4f13",
+        "parcelID" : "P07152019-0853035",
+        "pouchSize" : "medium",
+        "sellerID" : "z4eXQpONQjdxNgLXns4IRE3Hp0Z2",
+        "status" : "pending",
+        "timePosted" : "08:53"
+      },
+      "pickUp" : {
+        "contact" : "09987654321",
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "143 Kisad Rd, Burnham - Legarda Barangay, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.403722464452006,
+          "lng" : 120.59518842915263
+        },
+        "name" : "Ethelyn Vitorio",
+        "time" : "13:00"
+      },
+      "remittance" : {
+        "cash" : 420,
+        "contact" : "09987654321",
+        "date" : "07-22-2019",
+        "location" : {
+          "address" : "EDY Building, 144 Kisad Rd, Burnham - Legarda Barangay, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.403072335680406,
+          "lng" : 120.5955086651961
+        },
+        "name" : "Ethelyn Vitorio",
+        "time" : "12:00"
+      }
+    },
+    "P07152019-0857989" : {
+      "delivery" : {
+        "contact" : 9959903035,
+        "date" : "07-27-2019",
+        "location" : {
+          "address" : "Rambakan Dr, Baguio, Benguet, Philippines",
+          "lat" : 16.408615282313328,
+          "lng" : 120.59978829045444
+        },
+        "name" : "Earl Rimando",
+        "time" : "12:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-25-2019",
+        "description" : "Plaque",
+        "imgPath" : "bbg6ag171GPWsiAiIIAK3TroKjf1/P07152019-0857989/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/bbg6ag171GPWsiAiIIAK3TroKjf1%2FP07152019-0857989%2Fitem?alt=media&token=c09d9ac5-d531-4867-b3f3-d3d18565a6ab",
+        "parcelID" : "P07152019-0857989",
+        "pouchSize" : "medium",
+        "sellerID" : "bbg6ag171GPWsiAiIIAK3TroKjf1",
+        "status" : "pending",
+        "timePosted" : "08:57"
+      },
+      "pickUp" : {
+        "contact" : "09112345678",
+        "date" : "07-26-2019",
+        "location" : {
+          "address" : "Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40145843308884,
+          "lng" : 120.59771090336142
+        },
+        "name" : "Allezandrea Penetrante",
+        "time" : "10:00"
+      }
+    },
+    "P07152019-0859459" : {
+      "delivery" : {
+        "contact" : 9959903035,
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "Rambakan Dr, Baguio, Benguet, Philippines",
+          "lat" : 16.408615282313328,
+          "lng" : 120.59978829045444
+        },
+        "name" : "Earl Rimando",
+        "time" : "11:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-25-2019",
+        "description" : "Alcohol",
+        "imgPath" : "bbg6ag171GPWsiAiIIAK3TroKjf1/P07152019-0859459/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/bbg6ag171GPWsiAiIIAK3TroKjf1%2FP07152019-0859459%2Fitem?alt=media&token=755f4eac-ebb9-411a-bc62-667f41997703",
+        "parcelID" : "P07152019-0859459",
+        "pouchSize" : "small",
+        "sellerID" : "bbg6ag171GPWsiAiIIAK3TroKjf1",
+        "status" : "pending",
+        "timePosted" : "08:59"
+      },
+      "pickUp" : {
+        "contact" : "09112345678",
+        "date" : "07-27-2019",
+        "location" : {
+          "address" : "Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40145843308884,
+          "lng" : 120.59771090336142
+        },
+        "name" : "Allezandrea Penetrante",
+        "time" : "14:00"
+      },
+      "remittance" : {
+        "cash" : 150,
+        "contact" : "09112345678",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "10 Ben Palispis Hwy, Baguio, 2602 Benguet, Philippines",
+          "lat" : 16.401933218267317,
+          "lng" : 120.59486741547623
+        },
+        "name" : "Allezandrea Penetrante",
+        "time" : "17:00"
+      }
+    },
+    "P07152019-0900380" : {
+      "delivery" : {
+        "contact" : 9959903035,
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "Rambakan Dr, Baguio, Benguet, Philippines",
+          "lat" : 16.408615282313328,
+          "lng" : 120.59978829045444
+        },
+        "name" : "Earl Rimando",
+        "time" : "09:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-25-2019",
+        "description" : "Lion figurine",
+        "imgPath" : "bbg6ag171GPWsiAiIIAK3TroKjf1/P07152019-0900380/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/bbg6ag171GPWsiAiIIAK3TroKjf1%2FP07152019-0900380%2Fitem?alt=media&token=a2b49fce-5af5-45fa-a4e3-0d9d50e72e7b",
+        "parcelID" : "P07152019-0900380",
+        "pouchSize" : "small",
+        "sellerID" : "bbg6ag171GPWsiAiIIAK3TroKjf1",
+        "status" : "pending",
+        "timePosted" : "09:00"
+      },
+      "pickUp" : {
+        "contact" : "09112345678",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40145843308884,
+          "lng" : 120.59771090336142
+        },
+        "name" : "Allezandrea Penetrante",
+        "time" : "16:00"
+      },
+      "remittance" : {
+        "cash" : 250,
+        "contact" : "09112345678",
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "10 Ben Palispis Hwy, Baguio, 2602 Benguet, Philippines",
+          "lat" : 16.401933218267317,
+          "lng" : 120.59486741547623
+        },
+        "name" : "Allezandrea Penetrante",
+        "time" : "15:00"
+      }
+    },
+    "P07152019-2100669" : {
+      "delivery" : {
+        "contact" : 9784653216,
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "University of the Philippines-Baguio Campus, Baguio, Benguet, Philippines",
+          "lat" : 16.405818545432545,
+          "lng" : 120.5977380580623
+        },
+        "name" : "Bruno Martinez",
+        "time" : "11:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-25-2019",
+        "description" : "Wallet",
+        "imgPath" : "bbg6ag171GPWsiAiIIAK3TroKjf1/P07152019-2100669/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/bbg6ag171GPWsiAiIIAK3TroKjf1%2FP07152019-2100669%2Fitem?alt=media&token=2a98074e-a5ff-4d29-9d71-5aa3f2f2f339",
+        "parcelID" : "P07152019-2100669",
+        "pouchSize" : "small",
+        "sellerID" : "bbg6ag171GPWsiAiIIAK3TroKjf1",
+        "status" : "pending",
+        "timePosted" : "21:00"
+      },
+      "pickUp" : {
+        "contact" : "09112345678",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "CYA Building, Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40211035545248,
+          "lng" : 120.59665545922097
+        },
+        "name" : "Allezandrea Penetrante",
+        "time" : "16:00"
+      }
+    },
+    "P07152019-2102975" : {
+      "delivery" : {
+        "contact" : 9784653216,
+        "date" : "07-21-2019",
+        "location" : {
+          "address" : "University of the Philippines-Baguio Campus, Baguio, Benguet, Philippines",
+          "lat" : 16.405818545432545,
+          "lng" : 120.5977380580623
+        },
+        "name" : "Bruno Martinez",
+        "time" : "14:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-25-2019",
+        "description" : "Wallet",
+        "imgPath" : "bbg6ag171GPWsiAiIIAK3TroKjf1/P07152019-2102975/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/bbg6ag171GPWsiAiIIAK3TroKjf1%2FP07152019-2102975%2Fitem?alt=media&token=79971a39-75c4-4d37-9deb-d9b7b75906f0",
+        "parcelID" : "P07152019-2102975",
+        "pouchSize" : "small",
+        "sellerID" : "bbg6ag171GPWsiAiIIAK3TroKjf1",
+        "status" : "pending",
+        "timePosted" : "21:02"
+      },
+      "pickUp" : {
+        "contact" : "09112345678",
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "CYA Building, Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40211035545248,
+          "lng" : 120.59665545922097
+        },
+        "name" : "Allezandrea Penetrante",
+        "time" : "17:00"
+      },
+      "remittance" : {
+        "cash" : 360,
+        "contact" : "09112345678",
+        "date" : "07-22-2019",
+        "location" : {
+          "address" : "CYA Building, Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.402010621072108,
+          "lng" : 120.59687710990725
+        },
+        "name" : "Allezandrea Penetrante",
+        "time" : "09:00"
+      }
+    },
+    "P07172019-1701221" : {
+      "delivery" : {
+        "contact" : 9268049633,
+        "date" : "07-22-2019",
+        "location" : {
+          "address" : "30 Gov. Pack Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.406520349992643,
+          "lng" : 120.59718797822546
+        },
+        "name" : "Ange Donguiz",
+        "time" : "13:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-27-2019",
+        "description" : "GeForce GTX1060 Galax ed.",
+        "imgPath" : "fw2IMWcoAERqm1jQvINQsHzXjRi1/P07172019-1701221/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/fw2IMWcoAERqm1jQvINQsHzXjRi1%2FP07172019-1701221%2Fitem?alt=media&token=65cfb738-f5f3-4110-a297-13d991945708",
+        "parcelID" : "P07172019-1701221",
+        "pouchSize" : "medium",
+        "sellerID" : "fw2IMWcoAERqm1jQvINQsHzXjRi1",
+        "status" : "pending",
+        "timePosted" : "17:01"
+      },
+      "pickUp" : {
+        "contact" : "09269080380",
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "223 Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.394802789475122,
+          "lng" : 120.59987776859028
+        },
+        "name" : "Casey Steven Bernabe",
+        "time" : "11:00"
+      }
+    },
+    "P07172019-1721413" : {
+      "delivery" : {
+        "contact" : 9209038849,
+        "date" : "07-23-2019",
+        "location" : {
+          "address" : "12 Justice Village Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.399817917860652,
+          "lng" : 120.58827855661237
+        },
+        "name" : "Sam Tan",
+        "time" : "10:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-27-2019",
+        "description" : "headphones",
+        "imgPath" : "fw2IMWcoAERqm1jQvINQsHzXjRi1/P07172019-1721413/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/fw2IMWcoAERqm1jQvINQsHzXjRi1%2FP07172019-1721413%2Fitem?alt=media&token=09111fc4-d270-41ed-bb11-d6c0572c159b",
+        "parcelID" : "P07172019-1721413",
+        "pouchSize" : "medium",
+        "sellerID" : "fw2IMWcoAERqm1jQvINQsHzXjRi1",
+        "status" : "pending",
+        "timePosted" : "17:21"
+      },
+      "pickUp" : {
+        "contact" : "09269080380",
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "101 Camp 7 W Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.39156852034983,
+          "lng" : 120.59572006027268
+        },
+        "name" : "Casey Steven Bernabe",
+        "time" : "13:00"
+      },
+      "remittance" : {
+        "cash" : 200,
+        "contact" : "09269080380",
+        "date" : "07-24-2019",
+        "location" : {
+          "address" : "Worcester Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.400521947663172,
+          "lng" : 120.59656290489453
+        },
+        "name" : "Casey Steven Bernabe",
+        "time" : "17:00"
+      }
+    },
+    "P07172019-1856480" : {
+      "delivery" : {
+        "contact" : 9269450697,
+        "date" : "07-22-2019",
+        "location" : {
+          "address" : "288, Aspiras - Palispis Hwy, Baguio, Benguet, Philippines",
+          "lat" : 16.3996340218076,
+          "lng" : 120.58661589753439
+        },
+        "name" : "CK Montales",
+        "time" : "15:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-27-2019",
+        "description" : "headphones",
+        "imgPath" : "fw2IMWcoAERqm1jQvINQsHzXjRi1/P07172019-1856480/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/fw2IMWcoAERqm1jQvINQsHzXjRi1%2FP07172019-1856480%2Fitem?alt=media&token=89f098be-066b-4b3c-a98d-4be3b22d2b7e",
+        "parcelID" : "P07172019-1856480",
+        "pouchSize" : "medium",
+        "sellerID" : "fw2IMWcoAERqm1jQvINQsHzXjRi1",
+        "status" : "pending",
+        "timePosted" : "18:56"
+      },
+      "pickUp" : {
+        "contact" : "09269080380",
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "101 Camp 7 W Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.39156852034983,
+          "lng" : 120.59572006027268
+        },
+        "name" : "Casey Steven Bernabe",
+        "time" : "16:00"
+      },
+      "remittance" : {
+        "cash" : 200,
+        "contact" : "09269080380",
+        "date" : "07-24-2019",
+        "location" : {
+          "address" : "Worcester Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.400521947663172,
+          "lng" : 120.59656290489453
+        },
+        "name" : "Casey Steven Bernabe",
+        "time" : "15:00"
+      }
+    },
+    "P07172019-2022741" : {
+      "delivery" : {
+        "contact" : 9438246761,
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "120 Jose Felipe St, Baguio, Benguet, Philippines",
+          "lat" : 16.410480389665477,
+          "lng" : 120.58862296823622
+        },
+        "name" : "Harvey Cruz",
+        "time" : "09:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-27-2019",
+        "description" : "ps4 game",
+        "imgPath" : "xPjBRQpFQgNW6RipLDddN77oewm2/P07172019-2022741/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/xPjBRQpFQgNW6RipLDddN77oewm2%2FP07172019-2022741%2Fitem?alt=media&token=21535750-34b9-4206-843a-97f5fadf1814",
+        "parcelID" : "P07172019-2022741",
+        "pouchSize" : "small",
+        "sellerID" : "xPjBRQpFQgNW6RipLDddN77oewm2",
+        "status" : "pending",
+        "timePosted" : "20:22"
+      },
+      "pickUp" : {
+        "contact" : "09461648288",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40233151260855,
+          "lng" : 120.59599981882552
+        },
+        "name" : "Tom Cruz",
+        "time" : "09:00"
+      }
+    },
+    "P07172019-2028959" : {
+      "delivery" : {
+        "contact" : 9234518461,
+        "date" : "07-22-2019",
+        "location" : {
+          "address" : "Balsigan Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.39825263739483,
+          "lng" : 120.5943630752373
+        },
+        "name" : "Karen Marly",
+        "time" : "14:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-27-2019",
+        "description" : "ps4 gran turismo",
+        "imgPath" : "wHM5vC97MNQIonzJnbPchW90PyK2/P07172019-2028959/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/wHM5vC97MNQIonzJnbPchW90PyK2%2FP07172019-2028959%2Fitem?alt=media&token=cb23b19c-a1f6-4095-b8f8-11fb87b5951d",
+        "parcelID" : "P07172019-2028959",
+        "pouchSize" : "small",
+        "sellerID" : "wHM5vC97MNQIonzJnbPchW90PyK2",
+        "status" : "pending",
+        "timePosted" : "20:28"
+      },
+      "pickUp" : {
+        "contact" : "09264816472",
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "7 Lower Brookside, Baguio, Benguet, Philippines",
+          "lat" : 16.421327249528346,
+          "lng" : 120.60113048520003
+        },
+        "name" : "John Tron",
+        "time" : "11:00"
+      },
+      "remittance" : {
+        "cash" : 900,
+        "contact" : "09264816472",
+        "date" : "07-23-2019",
+        "location" : {
+          "address" : "7 Lower Brookside, Baguio, Benguet, Philippines",
+          "lat" : 16.4212472166012,
+          "lng" : 120.60118847280371
+        },
+        "name" : "John Tron",
+        "time" : "11:00"
+      }
+    },
+    "P07172019-2031736" : {
+      "delivery" : {
+        "contact" : 9784212434,
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "Extension Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.408572957795556,
+          "lng" : 120.58229187025351
+        },
+        "name" : "Nina Dean",
+        "time" : "12:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-27-2019",
+        "description" : "horizon dawn",
+        "imgPath" : "QCI1sMsUM5hz1Q8eCYieK8l8lG52/P07172019-2031736/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/QCI1sMsUM5hz1Q8eCYieK8l8lG52%2FP07172019-2031736%2Fitem?alt=media&token=9ad0c3be-88a8-4bef-a026-6f1418e00e47",
+        "parcelID" : "P07172019-2031736",
+        "pouchSize" : "small",
+        "sellerID" : "QCI1sMsUM5hz1Q8eCYieK8l8lG52",
+        "status" : "pending",
+        "timePosted" : "20:31"
+      },
+      "pickUp" : {
+        "contact" : "09351846383",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "CYA Building, Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40203098879586,
+          "lng" : 120.59697633445256
+        },
+        "name" : "Guillermo Kennedy",
+        "time" : "09:00"
+      }
+    },
+    "P07172019-2035159" : {
+      "delivery" : {
+        "contact" : 9263635466,
+        "date" : "07-24-2019",
+        "location" : {
+          "address" : "13 Worcester Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.399811382062897,
+          "lng" : 120.59451845114444
+        },
+        "name" : "Robert Ferguson",
+        "time" : "11:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-27-2019",
+        "description" : "tales of berseria",
+        "imgPath" : "uB8rz77otUOuOdrOjrwD29jJ4ku2/P07172019-2035159/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/uB8rz77otUOuOdrOjrwD29jJ4ku2%2FP07172019-2035159%2Fitem?alt=media&token=bc6fafa5-40fe-4e0f-a3dc-dc99462d431d",
+        "parcelID" : "P07172019-2035159",
+        "pouchSize" : "small",
+        "sellerID" : "uB8rz77otUOuOdrOjrwD29jJ4ku2",
+        "status" : "pending",
+        "timePosted" : "20:35"
+      },
+      "pickUp" : {
+        "contact" : "09221223235",
+        "date" : "07-23-2019",
+        "location" : {
+          "address" : "Km 5 Asin Road, Baguio City, Benguet, Philippines",
+          "lat" : 16.403440374421145,
+          "lng" : 120.5708806523601
+        },
+        "name" : "Max Curtis",
+        "time" : "14:00"
+      },
+      "remittance" : {
+        "cash" : 1300,
+        "contact" : "09221223235",
+        "date" : "07-24-2019",
+        "location" : {
+          "address" : "Km 5 Asin Road, Baguio City, Benguet, Philippines",
+          "lat" : 16.403476413544155,
+          "lng" : 120.57086445789677
+        },
+        "name" : "Max Curtis",
+        "time" : "15:00"
+      }
+    },
+    "P07172019-2040560" : {
+      "delivery" : {
+        "contact" : 9846434846,
+        "date" : "07-23-2019",
+        "location" : {
+          "address" : "13 Worcester Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.399551938605597,
+          "lng" : 120.59492230256679
+        },
+        "name" : "Gilberto Edwards",
+        "time" : "09:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-27-2019",
+        "description" : "alamang 15 pcs",
+        "imgPath" : "7UFRT3SmRZZyxYeWTyRFujmOXTp1/P07172019-2040560/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/7UFRT3SmRZZyxYeWTyRFujmOXTp1%2FP07172019-2040560%2Fitem?alt=media&token=00d14103-0cc4-4f25-8bd2-77ddf7dcf7f1",
+        "parcelID" : "P07172019-2040560",
+        "pouchSize" : "medium",
+        "sellerID" : "7UFRT3SmRZZyxYeWTyRFujmOXTp1",
+        "status" : "pending",
+        "timePosted" : "20:40"
+      },
+      "pickUp" : {
+        "contact" : "09553628113",
+        "date" : "07-21-2019",
+        "location" : {
+          "address" : "8 Magsaysay Ave, Baguio, 2602 Benguet, Philippines",
+          "lat" : 16.41514590324278,
+          "lng" : 120.59559735993263
+        },
+        "name" : "Gayle  Hudson",
+        "time" : "11:00"
+      },
+      "remittance" : {
+        "cash" : 450,
+        "contact" : "09553628113",
+        "date" : "07-24-2019",
+        "location" : {
+          "address" : "8 Magsaysay Ave, Baguio, 2602 Benguet, Philippines",
+          "lat" : 16.415222117153693,
+          "lng" : 120.59563501775021
+        },
+        "name" : "Gayle  Hudson",
+        "time" : "09:00"
+      }
+    },
+    "P07172019-2045990" : {
+      "delivery" : {
+        "contact" : 9656563458,
+        "date" : "07-21-2019",
+        "location" : {
+          "address" : "137 Leonard Wood Rd, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.413499970075886,
+          "lng" : 120.60752453943452
+        },
+        "name" : "Debbie Manawan",
+        "time" : "16:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-27-2019",
+        "description" : "Dog food",
+        "imgPath" : "tiorAGovQAUplGs0a54fFRDWtT33/P07172019-2045990/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/tiorAGovQAUplGs0a54fFRDWtT33%2FP07172019-2045990%2Fitem?alt=media&token=c8dff79f-d00d-4f2a-b501-8385edea4a2c",
+        "parcelID" : "P07172019-2045990",
+        "pouchSize" : "medium",
+        "sellerID" : "tiorAGovQAUplGs0a54fFRDWtT33",
+        "status" : "pending",
+        "timePosted" : "20:45"
+      },
+      "pickUp" : {
+        "contact" : "09444458971",
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "68 Naguilian Rd, Baguio, 2602 Benguet, Philippines",
+          "lat" : 16.415089166905645,
+          "lng" : 120.58883829927666
+        },
+        "name" : "Andrea Fleming",
+        "time" : "11:00"
+      }
+    },
+    "P07172019-2049429" : {
+      "delivery" : {
+        "contact" : 9323225134,
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "Puliwes Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.39586483134746,
+          "lng" : 120.59961459279815
+        },
+        "name" : "Darin Pope",
+        "time" : "09:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-27-2019",
+        "description" : "plushie",
+        "imgPath" : "N6soDgALmTb7mO7EoaW7ALsfq6u2/P07172019-2049429/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/N6soDgALmTb7mO7EoaW7ALsfq6u2%2FP07172019-2049429%2Fitem?alt=media&token=396552cd-bcd0-4a07-82ee-a49050648e80",
+        "parcelID" : "P07172019-2049429",
+        "pouchSize" : "small",
+        "sellerID" : "N6soDgALmTb7mO7EoaW7ALsfq6u2",
+        "status" : "pending",
+        "timePosted" : "20:49"
+      },
+      "pickUp" : {
+        "contact" : "09222132324",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "62a Dr Carino St, Baguio, Benguet, Philippines",
+          "lat" : 16.406465426093046,
+          "lng" : 120.59061443509245
+        },
+        "name" : "Kellie Weaver",
+        "time" : "15:00"
+      },
+      "remittance" : {
+        "cash" : 600,
+        "contact" : "09222132324",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "68 Kisad Rd, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.407293181426592,
+          "lng" : 120.59490584562798
+        },
+        "name" : "Kellie Weaver",
+        "time" : "15:00"
+      }
+    },
+    "P07172019-2053483" : {
+      "delivery" : {
+        "contact" : 9888864348,
+        "date" : "07-20-2019",
+        "location" : {
+          "address" : "146 Kisad Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.402268974600307,
+          "lng" : 120.59545166946006
+        },
+        "name" : "Miguel Mendoza",
+        "time" : "11:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-27-2019",
+        "description" : "washing machine",
+        "imgPath" : "DODBQA5f5SNl2vasVWdNPgEeGNh1/P07172019-2053483/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/DODBQA5f5SNl2vasVWdNPgEeGNh1%2FP07172019-2053483%2Fitem?alt=media&token=183b5657-d004-4c63-9852-159d46039f2a",
+        "parcelID" : "P07172019-2053483",
+        "pouchSize" : "large",
+        "sellerID" : "DODBQA5f5SNl2vasVWdNPgEeGNh1",
+        "status" : "pending",
+        "timePosted" : "20:53"
+      },
+      "pickUp" : {
+        "contact" : "09998165732",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "71 Dr P Cabato Dr, Baguio, Benguet, Philippines",
+          "lat" : 16.392522016038285,
+          "lng" : 120.59045088025385
+        },
+        "name" : "Leslie James",
+        "time" : "17:00"
+      }
+    },
+    "P07172019-2056751" : {
+      "delivery" : {
+        "contact" : 9555543464,
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "Unnamed Road, Baguio, Benguet, Philippines",
+          "lat" : 16.427612687800146,
+          "lng" : 120.60173138168564
+        },
+        "name" : "Joe Barton",
+        "time" : "11:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-27-2019",
+        "description" : "lantern",
+        "imgPath" : "S8NPtM5e1fWh4yIWHAxBOrgTz5G3/P07172019-2056751/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/S8NPtM5e1fWh4yIWHAxBOrgTz5G3%2FP07172019-2056751%2Fitem?alt=media&token=f52af152-e3c6-42a8-b4ed-8664918f1a68",
+        "parcelID" : "P07172019-2056751",
+        "pouchSize" : "small",
+        "sellerID" : "S8NPtM5e1fWh4yIWHAxBOrgTz5G3",
+        "status" : "pending",
+        "timePosted" : "20:56"
+      },
+      "pickUp" : {
+        "contact" : "09334719362",
+        "date" : "07-28-2019",
+        "location" : {
+          "address" : "89 Legarda Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.400995479822182,
+          "lng" : 120.593477370426
+        },
+        "name" : "Russel Cameron",
+        "time" : "09:00"
+      },
+      "remittance" : {
+        "cash" : 950,
+        "contact" : "09334719362",
+        "date" : "07-21-2019",
+        "location" : {
+          "address" : "29 Worcester Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40115235902419,
+          "lng" : 120.59350536487544
+        },
+        "name" : "Russel Cameron",
+        "time" : "09:00"
+      }
+    },
+    "P07172019-2100513" : {
+      "delivery" : {
+        "contact" : 9454318764,
+        "date" : "07-24-2019",
+        "location" : {
+          "address" : "94 Valenzuela St, Baguio, Benguet, Philippines",
+          "lat" : 16.409218277947346,
+          "lng" : 120.6015291451447
+        },
+        "name" : "Levi Cannon",
+        "time" : "13:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-27-2019",
+        "description" : "ps4 controller",
+        "imgPath" : "bcJheteJ21P7Hf9WcTgU76GaZ4f1/P07172019-2100513/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/bcJheteJ21P7Hf9WcTgU76GaZ4f1%2FP07172019-2100513%2Fitem?alt=media&token=06dc575f-4509-47b8-89e2-a9b3973cfc1b",
+        "parcelID" : "P07172019-2100513",
+        "pouchSize" : "small",
+        "sellerID" : "bcJheteJ21P7Hf9WcTgU76GaZ4f1",
+        "status" : "pending",
+        "timePosted" : "21:00"
+      },
+      "pickUp" : {
+        "contact" : "09211137283",
+        "date" : "07-23-2019",
+        "location" : {
+          "address" : "18 Justice Village Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.400180481957182,
+          "lng" : 120.58758954103557
+        },
+        "name" : "Jessica Martin",
+        "time" : "09:00"
+      }
+    },
+    "P07172019-2105372" : {
+      "delivery" : {
+        "contact" : 9446665765,
+        "date" : "07-22-2019",
+        "location" : {
+          "address" : "143 Kisad Rd, Burnham - Legarda Barangay, Baguio, 2600 Benguet, Philippines",
+          "lat" : 16.406268094872,
+          "lng" : 120.58714925202851
+        },
+        "name" : "Shannon Kuneta",
+        "time" : "12:00"
+      },
+      "details" : {
+        "COD" : 1,
+        "datePosted" : "07-27-2019",
+        "description" : "placemats",
+        "imgPath" : "viQSoWrG3IU9IvtpGZVVLFIp9VP2/P07172019-2105372/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/viQSoWrG3IU9IvtpGZVVLFIp9VP2%2FP07172019-2105372%2Fitem?alt=media&token=5dd8b39a-6c9c-410e-b06b-d005a7d44586",
+        "parcelID" : "P07172019-2105372",
+        "pouchSize" : "small",
+        "sellerID" : "viQSoWrG3IU9IvtpGZVVLFIp9VP2",
+        "status" : "pending",
+        "timePosted" : "21:05"
+      },
+      "pickUp" : {
+        "contact" : "09777151735",
+        "date" : "07-21-2019",
+        "location" : {
+          "address" : "Kennon Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.4023332,
+          "lng" : 120.59600709999995
+        },
+        "name" : "Lela  Pena",
+        "time" : "09:00"
+      },
+      "remittance" : {
+        "cash" : 150,
+        "contact" : "09777151735",
+        "date" : "07-24-2019",
+        "location" : {
+          "address" : "213 Balsigan Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.396644581904535,
+          "lng" : 120.59634848500389
+        },
+        "name" : "Lela  Pena",
+        "time" : "14:00"
+      }
+    },
+    "P07182019-2357756" : {
+      "delivery" : {
+        "contact" : 9269458079,
+        "date" : "07-25-2019",
+        "location" : {
+          "address" : "23 Worcester Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40013962470113,
+          "lng" : 120.59371070021913
+        },
+        "name" : "Artanis",
+        "time" : "11:00"
+      },
+      "details" : {
+        "COD" : 0,
+        "datePosted" : "07-28-2019",
+        "description" : "Fossil Watch",
+        "imgPath" : "fw2IMWcoAERqm1jQvINQsHzXjRi1/P07182019-2357756/item",
+        "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/pawit-c3960.appspot.com/o/fw2IMWcoAERqm1jQvINQsHzXjRi1%2FP07182019-2357756%2Fitem?alt=media&token=b90d6cf7-8850-496c-8931-d1084a9dc309",
+        "parcelID" : "P07182019-2357756",
+        "pouchSize" : "small",
+        "sellerID" : "fw2IMWcoAERqm1jQvINQsHzXjRi1",
+        "status" : "pending",
+        "timePosted" : "23:57"
+      },
+      "pickUp" : {
+        "contact" : "09269080380",
+        "date" : "07-24-2019",
+        "location" : {
+          "address" : "Iskolar ng Bayan Building, Governor Center Rd, Baguio, Benguet, Philippines",
+          "lat" : 16.40556921621175,
+          "lng" : 120.59899155229108
+        },
+        "name" : "Casey Steven Bernabe",
+        "time" : "14:00"
+      }
+    }
+  },
+  "sellerProfile" : {
+    "7UFRT3SmRZZyxYeWTyRFujmOXTp1" : {
+      "contactNumber" : "09553628113",
+      "email" : "gaayle@gmail.com",
+      "firstName" : "Gayle ",
+      "lastName" : "Hudson"
+    },
+    "8DQokW0EqEZfCkae3bkBErCFkY22" : {
+      "contactNumber" : "09269080380",
+      "email" : "bernabecasey@gmail.com",
+      "firstName" : "Casey Steven",
+      "lastName" : "Bernabe"
+    },
+    "A94hVTDJLOP3gVvBRZRbht6hymJ2" : {
+      "contactNumber" : "09052344234",
+      "email" : "test01@gmail.com",
+      "firstName" : "Marco",
+      "lastName" : "Escobar"
+    },
+    "AmpJXlKTLfS6BPs8pnjL8zWhLNe2" : {
+      "contactNumber" : "09954630901",
+      "email" : "Wakanda@gmail.com",
+      "firstName" : "T'chala",
+      "lastName" : "Wakanda"
+    },
+    "DODBQA5f5SNl2vasVWdNPgEeGNh1" : {
+      "contactNumber" : "09998165732",
+      "email" : "leseeit@gmail.com",
+      "firstName" : "Leslie",
+      "lastName" : "James"
+    },
+    "FufE02w01dhmJjm8BJDJtF0nt4A2" : {
+      "contactNumber" : "09123456789",
+      "email" : "userone@gmail.com",
+      "firstName" : "user",
+      "lastName" : "one"
+    },
+    "GWMA5T2mH5We65537vTNxtlZtTm2" : {
+      "contactNumber" : "09123419764",
+      "email" : "cardodalisay@gmail.com",
+      "firstName" : "Cardo",
+      "lastName" : "Dalisay"
+    },
+    "N6soDgALmTb7mO7EoaW7ALsfq6u2" : {
+      "contactNumber" : "09222132324",
+      "email" : "kelkel@gmail.com",
+      "firstName" : "Kellie",
+      "lastName" : "Weaver"
+    },
+    "QCI1sMsUM5hz1Q8eCYieK8l8lG52" : {
+      "contactNumber" : "09351846383",
+      "email" : "guiken@gmail.com",
+      "firstName" : "Guillermo",
+      "lastName" : "Kennedy"
+    },
+    "QdWxDSRuDDcc44kLdz0sENucbOH3" : {
+      "contactNumber" : "09064381535",
+      "email" : "2167856@slu.edu.ph",
+      "firstName" : "John Patrick",
+      "lastName" : "Sese"
+    },
+    "S8NPtM5e1fWh4yIWHAxBOrgTz5G3" : {
+      "contactNumber" : "09334719362",
+      "email" : "camecameha@gmail.com",
+      "firstName" : "Russel",
+      "lastName" : "Cameron"
+    },
+    "Ur0LqYNh2EeWuQw0XiIc69ouEji2" : {
+      "contactNumber" : "09994630901",
+      "email" : "genrig@gmail.com",
+      "firstName" : "Genrie",
+      "lastName" : "Gayaso"
+    },
+    "WfWjAyDIRChhq5ZBTFwYItjbU5h2" : {
+      "contactNumber" : "09293112829",
+      "email" : "cardo@gmail.com",
+      "firstName" : "Cardo",
+      "lastName" : "Dalisay"
+    },
+    "ZRjhQAPgFQOEx33XDtgo6KIIAQv1" : {
+      "contactNumber" : "09123419764",
+      "email" : "genrieg@gmail.com",
+      "firstName" : "Genrie",
+      "lastName" : "Gayaso"
+    },
+    "bbg6ag171GPWsiAiIIAK3TroKjf1" : {
+      "contactNumber" : "09112345678",
+      "email" : "allezandreapenetrante@gmail.com",
+      "firstName" : "Allezandrea",
+      "lastName" : "Penetrante"
+    },
+    "bcJheteJ21P7Hf9WcTgU76GaZ4f1" : {
+      "contactNumber" : "09211137283",
+      "email" : "jessjess@gmail.com",
+      "firstName" : "Jessica",
+      "lastName" : "Martin"
+    },
+    "fUmS9ucWPRSp1YDIk2FIzUYRPtF3" : {
+      "contactNumber" : "09959903035",
+      "email" : "brunomartinez@gmail.com",
+      "firstName" : "Bruno",
+      "lastName" : "Martinez"
+    },
+    "fw2IMWcoAERqm1jQvINQsHzXjRi1" : {
+      "contactNumber" : "09269080380",
+      "email" : "bernabecasey@gmail.com",
+      "firstName" : "casey",
+      "lastName" : "bernabe"
+    },
+    "hg1GazxxAdOTwOTFcmtgq9Bf7AH3" : {
+      "contactNumber" : "09123419764",
+      "email" : "genrie1@gmail.com",
+      "firstName" : "fsdfsdf",
+      "lastName" : "sdfsdfds"
+    },
+    "mnqhKy0XQzMFGTU8PhnD5WvUxo73" : {
+      "contactNumber" : "09123456789",
+      "email" : "JuanDelaCruz@gmail.com",
+      "firstName" : "Juan ",
+      "lastName" : "Dela Cruz"
+    },
+    "o9qhdHpsPDZyfuI9xUB8WwxYrLc2" : {
+      "contactNumber" : "09123419764",
+      "email" : "genrieg@gmail.com",
+      "firstName" : "Genrie",
+      "lastName" : "Gayaso"
+    },
+    "rYC0fD6eG1SfkXWC6XmDngUDEMz2" : {
+      "contactNumber" : "09293112829",
+      "email" : "user123@gmail.com",
+      "firstName" : "Rizalde",
+      "lastName" : "Velasco"
+    },
+    "tiorAGovQAUplGs0a54fFRDWtT33" : {
+      "contactNumber" : "09444458971",
+      "email" : "andreflem@gmail.com",
+      "firstName" : "Andrea",
+      "lastName" : "Fleming"
+    },
+    "uB8rz77otUOuOdrOjrwD29jJ4ku2" : {
+      "contactNumber" : "09221223235",
+      "email" : "maxcurtis@gmail.com",
+      "firstName" : "Max",
+      "lastName" : "Curtis"
+    },
+    "viQSoWrG3IU9IvtpGZVVLFIp9VP2" : {
+      "contactNumber" : "09777151735",
+      "email" : "lelapena@gmail.com",
+      "firstName" : "Lela ",
+      "lastName" : "Pena"
+    },
+    "vzXHw6eZSkRCxKCFxESywWkWweX2" : {
+      "contactNumber" : "09123419764",
+      "email" : "genrieg1@gmail.com",
+      "firstName" : "mar",
+      "lastName" : "roxas"
+    },
+    "wHM5vC97MNQIonzJnbPchW90PyK2" : {
+      "contactNumber" : "09264816472",
+      "email" : "johntron@gmail.com",
+      "firstName" : "John",
+      "lastName" : "Tron"
+    },
+    "xPjBRQpFQgNW6RipLDddN77oewm2" : {
+      "contactNumber" : "09461648288",
+      "email" : "tomcruz@gmail.com",
+      "firstName" : "Tom",
+      "lastName" : "Cruz"
+    },
+    "z4eXQpONQjdxNgLXns4IRE3Hp0Z2" : {
+      "contactNumber" : "09987654321",
+      "email" : "ethelynvitorio@gmail.com",
+      "firstName" : "Ethelyn",
+      "lastName" : "Vitorio"
+    },
+    "zy5h9tlLxpP1R9rW6ZtsyjPZh2C3" : {
+      "contactNumber" : "09064381535",
+      "email" : "adventech.baguio@gmail.com",
+      "firstName" : "Laurence",
+      "lastName" : "Villamor"
+    }
+  },
+  "sysConf" : {
+    "deliveryRun" : [ {
+      "from" : "08:00",
+      "to" : "11:00"
+    }, {
+      "from" : "11:00",
+      "to" : "14:00"
+    }, {
+      "from" : "14:00",
+      "to" : "17:00"
+    } ],
+    "minMax" : {
+      "maxAccept" : 7,
+      "minAccept" : 1
+    },
+    "processTime" : 15,
+    "warehouse" : {
+      "lat" : 16.4087281,
+      "lng" : 120.5970113
+    }
+  }
+}

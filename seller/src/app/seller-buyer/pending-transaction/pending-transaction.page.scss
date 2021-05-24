@@ -1,0 +1,37 @@
+.split {
+  display: block;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 12px;
+}
+.split span {
+  display: block;
+  float: right;
+  font-size: 1rem;
+}
+label {
+  font-size: 15px;
+  color: #c45603;
+  label:hover {
+    color: Red;
+  }
+}
+ion-toolbar {
+  --min-height: 6vh;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fl{
+  display: flex;
+  align-items: center;
+  p{
+    color: darkred
+  }
+  h3{
+    color: darkred
+  }
+}

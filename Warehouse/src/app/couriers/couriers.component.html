@@ -1,0 +1,247 @@
+<div class="full-container pa-3">
+  <!-- Courier List -->
+  <mat-card class="mat-elevation-z8 pa-0 courier-card">
+    <mat-toolbar>Couriers</mat-toolbar>
+    <div class="scrollable" [loaderId]="'loader-01'" ngxUiLoaderBlurred blur="0">
+      <mat-nav-list class="pa-0">
+        <mat-list-item *ngFor="let cour of couriers" (click)="parcelsAssign(cour.key); selected = cour" [ngClass]="{'selected': selected == cour}">
+          <h4 mat-line>{{cour.lastName}}, {{cour.firstName}}</h4>
+          <p mat-line class="subtitle"> {{cour.contactNumber}} </p>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-nav-list>
+      <ngx-ui-loader fgsColor="#34421e" overlayColor="rgba(256,256,256,1)" [loaderId]="'loader-01'"></ngx-ui-loader>
+    </div>
+  </mat-card>
+
+  <!-- Parcels -->
+  <div class="flex mr-3 parcel-container">
+    <div>
+      <mat-card class="mat-elevation-z8 ml-3 pa-0 parcels-card">
+        <mat-toolbar color="paw-it-green">
+          <span>Parcels</span>
+          <span class="toolbar-spacer"></span>
+          <mat-form-field class="mr-3">
+            <mat-label>Delivery Run</mat-label>
+            <mat-select [(ngModel)]="dlRun" (ngModelChange)="changeDR($event)">
+              <mat-option *ngFor="let hours of hours; let i = index" value="{{hours.key}}">Delivery {{i+1}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="day" (ngModelChange)="changeDate($event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </mat-toolbar>
+        <div class="scrollable" *ngIf="route.length">
+          <div class="flex">
+            <h2 class="dispatch-title">For Dispatch</h2>
+            <h2 class="incoming-title">Incoming</h2>
+          </div>
+
+          <!-- <mat-progress-bar mode="indeterminate" *ngIf="!forDispatchBatches && !incomingBatches"></mat-progress-bar> -->
+          <!-- Template for lists -->
+          <div *ngFor="let hours of hours; let i = index" style="border-top: 1px solid rgba(0,0,0,.12)">
+            <mat-card class="mb-0 pt-0 pb-0 mat-elevation-z0" *ngIf="!dlRun || (dlRun == hours.key)">
+              <!-- Insert loop for parcels here-->
+              <p class="split pt-3">Delivery run {{i+1}} Time: {{hours.from}} - {{hours.to}}
+              </p>
+              <mat-card-content class="container">
+
+                <!-- If delivery run is complete -->
+                <div *ngIf="drStatus" class="dispatch-empty-list">
+                  <div class="empty-image">
+                    <p class="empty-title">Delivery run complete</p>
+                  </div>
+                </div>
+                <div *ngIf="forDispatchBatches.length === 0 && incomingBatches.length === 0" class="dispatch-empty-list">
+                  <div class="empty-image">
+                    <p class="empty-title">No assign parcel for delivery run {{i+1}}</p>
+                  </div>
+                </div>
+
+                <!-- Dispatch list-->
+                <div class="dispatch-list" *ngIf="!drStatus">
+                  <mat-card class="mat-elevation-z0 pt-0" *ngFor="let dispatch of forDispatchBatches">
+                    <mat-selection-list class="pt-0" *ngIf="dispatch.batch == hours.key" (selectionChange)="selectDispatchParcel($event, dispatch.route.key, dispatch.route.parcelID, dispatch.route.status, dispatch.route.cash)"
+                      (dblclick)="parcelDetails(dispatch.route.parcelID)">
+                      <mat-list-option [ngClass]="{'false-dispatched': !dispatch.route.warehouse, 'false-undispatched': dispatch.route.warehouse}"
+                        class="mat-elevation-z2 mb-2 test" *ngIf="!dispatch.route.dispatched" [value]="dispatch.route.parcelID">
+                        <h3 mat-line *ngIf="dispatch.route.status ==='remittance'">Cash</h3>
+                        <h3 mat-line *ngIf="dispatch.route.status !=='remittance'">Parcel</h3>
+                        <h3 mat-line>Parcel ID: {{dispatch.route.parcelID}}</h3>
+                        <p mat-line>Status: {{dispatch.route.status}}</p>
+                        <p mat-line>Time: {{dispatch.route.time}}</p>
+                        <p mat-line *ngIf="(!dispatch.route.warehouse && dispatch.route.dispatched) || (dispatch.route.dispatched === false && dispatch.route.status === 'delivery' && dispatch.route.COD === 1)">
+                          Parcel/Cash has been dispatch</p>
+                        <p mat-line *ngIf="dispatch.route.activity === 'in-warehouse'">Parcel/Cash is in
+                          <br>warehouse</p>
+                        <p mat-line *ngIf="dispatch.route.status === 'remittance'">Cash: &#8369;{{dispatch.route.cash}}
+                        </p>
+                      </mat-list-option>
+                    </mat-selection-list>
+                  </mat-card>
+                  <div *ngIf="totalDispatch" style="text-align: center">Total cash to dispatch: &#8369;{{totalDispatch}}
+                  </div>
+                </div>
+
+                <!-- Incoming list -->
+                <div class="incoming-list" *ngIf="!drStatus">
+                  <mat-card class="mat-elevation-z0 pt-0" *ngFor="let incoming of incomingBatches">
+                    <mat-selection-list class="pt-0" *ngIf="incoming.batch == hours.key" (selectionChange)="selectIncomingParcels($event, incoming.route.key, incoming.route.parcelID, incoming.route.status, incoming.route.cash)"
+                      (dblclick)="parcelDetails(incoming.route.parcelID)">
+                      <mat-list-option [ngClass]="{'false-stored': incoming.route.done, 'false-incoming': !incoming.route.done}" class="mat-elevation-z2 mb-2 pa-0"
+                        *ngIf="!incoming.route.warehouse">
+                        <h3 mat-line *ngIf="incoming.route.COD && incoming.route.status === 'delivery'">Cash</h3>
+                        <h3 mat-line *ngIf="!incoming.route.COD">Parcel</h3>
+                        <h3 mat-line>Parcel ID: {{incoming.route.parcelID}}</h3>
+                        <p mat-line>Status: {{incoming.route.status}}</p>
+                        <p mat-line>Time: {{incoming.route.time}}</p>
+                        <p mat-line *ngIf="incoming.route.warehouse">Parcel/Cash has been stored</p>
+                        <p mat-line *ngIf="incoming.route.COD && incoming.route.status === 'delivery'">Cash: &#8369;{{incoming.route.cash}}
+                        </p>
+                        <p mat-line *ngIf="incoming.route.reason">Report: {{incoming.route.reason}}</p>
+                      </mat-list-option>
+                    </mat-selection-list>
+                  </mat-card>
+                  <div *ngIf="totalIncoming" style="text-align: center">Total cash to store: &#8369;{{totalIncoming}}
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div class="flex">
+            <button class="dispatch-button mb-3 ml-5 mr-5" mat-raised-button (click)="dispatch()" [disabled]="selectedDispatch.length === 0">Dispatch</button>
+            <button class="store-button mb-3 ml-5 mr-5" mat-raised-button (click)="store()" [disabled]="selectedIncoming.length === 0">Store</button>
+          </div>
+        </div>
+
+        <!-- If no courier is selected -->
+        <div class="empty-message" *ngIf="!route.length">
+          <div class="empty-image">
+            <img class="empty-img" width="40%" height="40%" src="../../assets/images/docus.png" alt="noSelection">
+            <p class="empty-title mb-0">No courier selected or the courier has no delivery run for {{this.date}}. </p>
+          </div>
+        </div>
+
+        <!-- Dialog for Dispatch -->
+        <ng-template #dispatchDialog>
+          <h1 matDialogTitle>The following parcels will be dispatched</h1>
+          <div mat-dialog-content>
+            <mat-list>
+              <!-- Place selected parcels loop here -->
+              <mat-list-item *ngFor="let selectedDispatch of selectedDispatch">
+                <h4 mat-line>{{selectedDispatch.id}}</h4>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <div mat-dialog-actions>
+            <button mat-button matDialogClose="close">Close</button>
+            <button mat-button matDialogClose="confirm">Confirm</button>
+          </div>
+        </ng-template>
+
+        <!-- Dialog for storing parcels -->
+        <ng-template #storeParcelDialog>
+          <h1 matDialogTitle>The following parcels will be stored in the warehouse</h1>
+          <div mat-dialog-content>
+            <mat-list>
+              <!-- Place selected parcels loop here -->
+              <mat-list-item *ngFor="let selectedIncoming of selectedIncoming">
+                <h4 mat-line>{{selectedIncoming.id}}</h4>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <div mat-dialog-actions>
+            <button mat-button matDialogClose="close">Close</button>
+            <button mat-button matDialogClose="confirm">Confirm</button>
+          </div>
+        </ng-template>
+
+
+      </mat-card>
+      <!-- Undispatched/Not stored card -->
+      <mat-card class="mat-elevation-z8 ml-3 mt-3 pa-0 undispatched-card" *ngIf="drStatus">
+        <div class="scroll">
+          <div class="flex">
+            <h2 class="dispatch-title">Undispatched</h2>
+            <h2 class="incoming-title">Not stored</h2>
+          </div>
+          <mat-card-content class="container">
+            <div class="dispatch-list">
+              <div *ngFor="let dispatch of forDispatchBatches">
+                <div *ngIf="dispatch.batch == dlRun">
+                  <mat-card class="ma-2" *ngIf="!dispatch.route.dispatched">
+                    <p class="text-center">Parcel ID: {{dispatch.route.parcelID}}</p>
+                  </mat-card>
+                </div>
+              </div>
+            </div>
+            <div class="incoming-list">
+              <div *ngFor="let incoming of incomingBatches">
+                <div *ngIf="incoming.batch == dlRun">
+                  <mat-card class="ma-2" *ngIf="!incoming.route.warehouse">
+                    <p class="text-center">Parcel ID: {{incoming.route.parcelID}}</p>
+                  </mat-card>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+
+
+  <mat-card class="mat-elevation-z8 ml-3 pa-0 details-card">
+    <mat-toolbar>Parcel Details</mat-toolbar>
+    <div class="scrollable" *ngIf="fullItem.length">
+      <mat-card-content class="pa-3" *ngFor="let item of fullItem">
+        <div>
+          <div class="parcel-img">
+            <img width="100%" src="{{item.details.imgUrl}}">
+          </div>
+          <mat-list>
+            <h3 mat-subheader>General Information</h3>
+            <mat-list-item>
+              <h4 mat-line>{{item.details.pouchSize}}</h4>
+              <p class="subtitle" mat-line>Pouch Size</p>
+            </mat-list-item>
+            <mat-divider class="pr-3 pl-3"></mat-divider>
+
+            <h3 mat-subheader>Pickup Information</h3>
+            <mat-list-item>
+              <h4 mat-line>{{item.pickUp.name}}</h4>
+              <p class="subtitle" mat-line> Sender </p>
+            </mat-list-item>
+            <mat-divider class="pr-3 pl-3"></mat-divider>
+
+            <h3 mat-subheader>Delivery Information</h3>
+            <mat-list-item>
+              <h4 mat-line>{{item.delivery.name}}</h4>
+              <p class="subtitle" mat-line> Recipient </p>
+            </mat-list-item>
+            <mat-divider class="pr-3 pl-3"></mat-divider>
+            <div *ngIf="item.remittance">
+              <h3 mat-subheader>Remittance Information</h3>
+              <mat-list-item>
+                <h4 mat-line>{{item.remittance.name}}</h4>
+                <p class="subtitle" mat-line> Recipient </p>
+              </mat-list-item>
+            </div>
+          </mat-list>
+        </div>
+
+      </mat-card-content>
+    </div>
+
+    <!-- If no parcels are selected -->
+    <div class="empty-message" *ngIf="!fullItem.length">
+      <div class="empty-image">
+        <img class="empty-img" width="50%" height="50%" src="../../assets/images/docus.png" alt="noSelection">
+        <p class="empty-title mb-0">No parcels selected</p>
+        <p class="empty-subtitle mt-0">Please double-click a parcel to view details</p>
+      </div>
+    </div>
+  </mat-card>
+</div>

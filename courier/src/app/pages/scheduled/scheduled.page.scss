@@ -1,0 +1,41 @@
+.split {
+    display: block;
+    padding-right: 1rem;
+    padding-left: 1rem; 
+}
+.split span {
+    display: block;
+    float: right;
+}
+ion-card-content p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.empty-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 56px);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.empty-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-title {
+  text-align: center;
+  color: #666666;
+}
+
+.empty-img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+

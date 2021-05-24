@@ -1,0 +1,179 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button (click)="dismiss()" slot="start" fill="clear" color="secondary" size="small">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>Parcel details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="flex mr-3 ml-3">
+    <img width="100%" height="100%" src="{{parcel.details.imgUrl}}" alt="Parcel image">
+  </div>
+  <ion-grid>
+    <ion-row class="pr-2 pl-2">
+      <ion-col>
+        <ion-label position="stacked" class="form-label pb-3">Parcel description</ion-label>
+        <ion-input class="form-input mt-2 pl-1 pr-1" readonly>{{parcel.details.description}}</ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="pr-2 pl-2 pb-2 bb">
+      <ion-col>
+        <ion-label position="stacked" class="form-label pb-3">Parcel Size</ion-label>
+        <ion-input class="form-input mt-2 pl-1 pr-1" readonly>{{parcel.details.pouchSize}}</ion-input>
+      </ion-col>
+    </ion-row>
+    <!-- Pick-up information -->
+    <ion-label position="stacked" class="form-label pa-3">Pick-up information</ion-label>
+    <ion-row class="pr-2 pl-2">
+      <ion-col>
+        <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+          <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+            <ion-icon name="person"></ion-icon>
+          </ion-button>
+          {{parcel.pickUp.name}}
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="pr-2 pl-2">
+      <ion-col>
+        <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+          <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+            <ion-icon name="call"></ion-icon>
+          </ion-button>
+          {{parcel.pickUp.contact}}
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="pr-2 pl-2">
+      <ion-col>
+        <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+          <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+            <ion-icon name="pin"></ion-icon>
+          </ion-button>
+          {{parcel.pickUp.location.address}}
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="pr-2 pl-2 pb-2 bb">
+      <ion-col>
+        <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+          <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+            <ion-icon name="calendar"></ion-icon>
+          </ion-button>
+          {{parcel.pickUp.date}} {{parcel.pickUp.time}}
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <!-- Delivery information -->
+    <ion-label position="stacked" class="form-label pa-3">Delivery information</ion-label>
+    <ion-row class="pr-2 pl-2">
+      <ion-col>
+        <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+          <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+            <ion-icon name="person"></ion-icon>
+          </ion-button>
+          {{parcel.delivery.name}}
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="pr-2 pl-2">
+      <ion-col>
+        <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+          <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+            <ion-icon name="call"></ion-icon>
+          </ion-button>
+          {{parcel.delivery.contact}}
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="pr-2 pl-2">
+      <ion-col>
+        <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+          <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+            <ion-icon name="pin"></ion-icon>
+          </ion-button>
+          {{parcel.delivery.location.address}}
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="pr-2 pl-2 pb-2 bb">
+      <ion-col>
+        <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+          <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+            <ion-icon name="calendar"></ion-icon>
+          </ion-button>
+          {{parcel.delivery.date}} {{parcel.delivery.time}}
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <!-- Delivery remittance information -->
+    <div *ngIf = "parcel.details.COD">
+      <ion-label position="stacked" class="form-label pa-3">Delivery remittance information</ion-label>
+      <ion-row class="pr-2 pl-2">
+        <ion-col>
+          <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+            <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+              <ion-icon name="person"></ion-icon>
+            </ion-button>
+            {{parcel.remittance.name}}
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pr-2 pl-2">
+        <ion-col>
+          <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+            <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+              <ion-icon name="call"></ion-icon>
+            </ion-button>
+            {{parcel.remittance.contact}}
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pr-2 pl-2">
+        <ion-col>
+          <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+            <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+              <ion-icon name="cash"></ion-icon>
+            </ion-button>
+            {{parcel.remittance.cash}}
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pr-2 pl-2">
+        <ion-col>
+          <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+            <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+              <ion-icon name="pin"></ion-icon>
+            </ion-button>
+            {{parcel.remittance.location.address}}
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pr-2 pl-2">
+        <ion-col>
+          <ion-input class="form-input mt-2 pl-1 pr-1" readonly>
+            <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+              <ion-icon name="calendar"></ion-icon>
+            </ion-button>
+            {{parcel.remittance.date}} {{parcel.remittance.time}}
+          </ion-input>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-content color="primary">
+  <div class="space">
+  </div>
+  <div class="space pa-0 ma-0">
+    <ion-img src="../../assets/images/new_brand.png"></ion-img>
+  </div>
+  <form [formGroup]="forms" (ngSubmit)="loginForm(forms.value)">
+    <!-- Email address with error message-->
+    <ion-row>
+      <ion-col offset="1">
+        <ion-input formControlName="email" placeholder="Email Address" class="form-input mt-1 pl-1">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngIf="forms.get('email').errors && (forms.get('email').touched || forms.get('email').dirty)"
+        class="errormessage">
+        Please enter your email.
+      </ion-col>
+    </ion-row>
+
+
+    <!-- Password Input with error message-->
+    <ion-row>
+      <ion-col offset="1">
+        <ion-input type="password" formControlName="password" placeholder="Password" class="form-input mt-1 pl-1">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngIf="forms.get('password').errors && (forms.get('password').touched || forms.get('password').dirty)"
+        class="errormessage">
+        Please enter your password.
+      </ion-col>
+    </ion-row>
+    <ion-button class="btn" expand="full" type="submit" [disabled]="!forms.valid">Login</ion-button>
+  </form>
+  <ion-button class="btn" (click)="register()" expand="full">Register</ion-button>
+</ion-content>

@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "pawit-panel1",
+    "staging": "data-trial-b9f93"
+  },
+  "targets": {
+    "pawit-panel1": {
+      "hosting": {
+        "panel1-ls": [
+          "pawit-panel1-ls"
+        ],
+        "panel1-wh": [
+          "pawit-panel1-wh"
+        ]
+      }
+    }
+  }
+}

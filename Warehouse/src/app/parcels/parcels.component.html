@@ -1,0 +1,166 @@
+<mat-toolbar class="date-container width-unset ml-3 mb-1 mr-3">
+  <!-- Search -->
+  <!-- <h3 class="pr-2 pb-1">Search parcel by parcel ID: </h3>
+  <mat-form-field class="pt-0 input-container no-line mt-2">
+    <input matInput type="text" [(ngModel)]="parcel" class="searchbar pa-1">
+    <button mat-button *ngIf="parcel" matSuffix mat-icon-button aria-label="Clear" (click)="parcel=''">
+      <mat-icon class="ml-3 mb-2">close</mat-icon>
+    </button>
+  </mat-form-field> -->
+  <!-- Select button -->
+  <mat-form-field class="pl-4">
+    <mat-label>-- All parcels --</mat-label>
+    <mat-select [(ngModel)]="filter" (ngModelChange)="changeFilter($event)">
+      <mat-option value="0">-- All parcels --</mat-option>
+      <mat-option value="warehouse">In warehouse</mat-option>
+      <mat-option value="completed">completed</mat-option>
+      <mat-option value="current">Current</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-toolbar>
+
+<div class="full-container ml-3 mr-3 mb-3">
+  <mat-card class="mat-elevation-z8 pa-0 parcel-card">
+    <mat-toolbar>Parcels</mat-toolbar>
+    <div class="scrollable" [loaderId]="'loader-02'" ngxUiLoaderBlurred blur="0">
+      <mat-nav-list class="pa-0">
+        <mat-list-item *ngFor="let item of packages" (click)="parcelDet(item.details.parcelID); selected = item; getHistoryParcel(item.details.parcelID)" [ngClass]="{'selected': selected == item}">
+          <h4 mat-line>{{item.details.parcelID}}</h4>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-nav-list>
+      <ngx-ui-loader fgsColor="#34421e" overlayColor="rgba(256,256,256,1)" [loaderId]="'loader-02'" text="Loading"></ngx-ui-loader>
+    </div>
+  </mat-card>
+
+  <!-- Parcel Details -->
+  <mat-card class="mat-elevation-z8 ml-3 pa-0 details-card">
+    <mat-toolbar color="paw-it-green">
+      <span>Parcels Details</span>
+    </mat-toolbar>
+    <div class="scrollable" *ngFor="let details of parcelDetails">
+      <mat-card-content>
+        <div class="flex">
+          <div class="parcel-img">
+            <img src="{{details.details.imgUrl}}" width="100%">
+          </div>
+          <mat-list>
+            <h3 mat-subheader>General Information</h3>
+            <mat-list-item>
+              <h4 mat-line>{{details.details.parcelID}}</h4>
+              <p class="subtitle" mat-line>Parcel ID</p>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 mat-line>{{details.details.pouchSize}}</h4>
+              <p class="subtitle" mat-line>Pouch Size</p>
+            </mat-list-item>
+            <mat-list-item *ngIf="details.remittance">
+              <h4 mat-line>{{details.remittance.cash}}</h4>
+              <p class="subtitle" mat-line>Remittance Amount</p>
+            </mat-list-item>
+          </mat-list>
+        </div>
+        <mat-divider class="pr-3 pl-3 relative"></mat-divider>
+        <div class="flex ma-3">
+
+          <!-- Pickup Information -->
+          <mat-list class="half-width">
+            <h3 mat-subheader>Pickup Information</h3>
+            <mat-list-item>
+              <h4 mat-line>{{details.pickUp.name}}</h4>
+              <p class="subtitle" mat-line>Sender</p>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 mat-line>{{details.pickUp.location.address}}</h4>
+              <p class="subtitle" mat-line>Location</p>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 mat-line>{{details.pickUp.date}} {{details.pickUp.time}}</h4>
+              <p class="subtitle" mat-line>Schedule</p>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 mat-line>{{details.pickUp.courier}}</h4>
+              <p class="subtitle" mat-line>Courier Assigned</p>
+            </mat-list-item>
+          </mat-list>
+          <!-- Delivery Information -->
+          <mat-list class="half-width">
+            <h3 mat-subheader>Delivery Information</h3>
+            <mat-list-item>
+              <h4 mat-line>{{details.delivery.name}}</h4>
+              <p class="subtitle" mat-line>Recipient</p>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 mat-line>{{details.delivery.location.address}}</h4>
+              <p class="subtitle" mat-line>Location</p>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 mat-line>{{details.delivery.date}} {{details.delivery.time}}</h4>
+              <p class="subtitle" mat-line>Schedule</p>
+            </mat-list-item>
+            <mat-list-item>
+              <h4 mat-line>{{details.delivery.courier}}</h4>
+              <p class="subtitle" mat-line>Courier Assigned</p>
+            </mat-list-item>
+          </mat-list>
+        </div>
+        <mat-divider class="pr-3 pl-3 relative" *ngIf="details.remittance"></mat-divider>
+        <!-- Remittance Information -->
+        <mat-list class="ma-3" *ngIf="details.remittance">
+          <h3 mat-subheader>Remittance Information</h3>
+          <mat-list-item>
+            <h4 mat-line>{{details.remittance.name}}</h4>
+            <p class="subtitle" mat-line>Recipient</p>
+          </mat-list-item>
+          <mat-list-item>
+            <h4 mat-line>{{details.remittance.location.address}}</h4>
+            <p class="subtitle" mat-line>Location</p>
+          </mat-list-item>
+          <mat-list-item>
+            <h4 mat-line>{{details.remittance.date}} {{details.remittance.time}}</h4>
+            <p class="subtitle" mat-line>Schedule</p>
+          </mat-list-item>
+          <mat-list-item>
+            <h4 mat-line>{{details.remittance.courier}}</h4>
+            <p class="subtitle" mat-line>Courier Assigned</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </div>
+
+    <!-- If no parcels are selected -->
+    <div class="empty-message" *ngIf="!parcelDetails">
+      <div class="empty-image">
+        <img class="empty-img" width="50%" height="50%" src="../../assets/images/docus.png" alt="noSelection">
+        <p class="empty-title mb-0">No parcels selected</p>
+        <p class="empty-subtitle mt-0">Please select a parcel to view details</p>
+      </div>
+    </div>
+  </mat-card>
+
+  <!-- Parcel log -->
+  <mat-card class="mat-elevation-z8 ml-3 pa-0 history-card">
+    <mat-toolbar>Parcel history log</mat-toolbar>
+    <div class="scrollable" *ngFor="let details of parcelDetails">
+      <mat-card-content class="pa-2">
+        <mat-list>
+          <mat-list-item *ngFor="let log of logs">
+            <h5 mat-line>{{log.date}} @{{log.time}}</h5>
+            <p class="subtitle" mat-line>{{log.remarks.remark}}</p>
+            <p class="subtitle" mat-line>{{log.remarks.remarks}}</p> <!-- fix -->
+            <mat-divider></mat-divider>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </div>
+
+    <!-- If no parcels are selected -->
+    <div class="empty-message" *ngIf="!parcelDetails">
+      <div class="empty-image">
+        <img class="empty-img" width="50%" height="50%" src="../../assets/images/docus.png" alt="noSelection">
+        <p class="empty-title mb-0">No parcels selected</p>
+        <p class="empty-subtitle mt-0">Please select a parcel to view details</p>
+      </div>
+    </div>
+  </mat-card>
+</div>

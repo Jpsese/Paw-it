@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-button fill="clear" (click)="dismiss()" slot="start">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>Parcel Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="scrollable">
+    <p class="split">{{routeDetails[0].parcel.activity}}
+      <span *ngIf="routeDetails[0].parcel.parcelDetails.COD === 1">Cash-on-Delivery</span>
+      <span *ngIf="routeDetails[0].parcel.parcelDetails.COD === 0">Non-Cash-on-Delivery</span>
+
+    </p>
+    <ion-card-content>
+      <img src="{{routeDetails[0].parcel.parcelDetails.imgUrl}}">
+      <table>
+        <tr>
+          <td>Sender:</td>
+          <td>{{routeDetails[0].parcel.activityDetails.name}}</td>
+        </tr>
+        <tr>
+          <td>Contact No: </td>
+          <td>{{routeDetails[0].parcel.activityDetails.contact}}</td>
+        </tr>
+        <tr *ngIf="(routeDetails[0].parcel.status === 'delivery' && routeDetails[0].parcel.COD) || (routeDetails[0].parcel.status === 'remittance' && routeDetails[0].parcel.COD)">
+          <td>Remittance amount: </td>
+          <td>&#8369;{{routeDetails[0].parcel.cash}}</td>
+        </tr>
+        <tr>
+          <td>Pouch Size: </td>
+          <td>{{routeDetails[0].parcel.parcelDetails.pouchSize}}</td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>{{routeDetails[0].parcel.parcelDetails.description}}</td>
+        </tr>
+        <tr>
+          <td>Location: </td>
+          <td>{{routeDetails[0].parcel.activityDetails.location.address}}</td>
+        </tr>
+        <tr>
+          <td>Schedule: </td>
+          <td>{{routeDetails[0].parcel.activityDetails.date}} {{routeDetails[0].parcel.activityDetails.time}}</td>
+        </tr>
+
+      </table>
+    </ion-card-content>
+  </ion-card>
+
+  <div #mapElement class="map"></div>
+  <ion-footer *ngIf="routeDetails[0].parcel.done === undefined">
+    <ion-toolbar>
+      <ion-button slot="end" color="danger" (click)="report()">Report</ion-button>
+      <ion-button slot="end" color="secondary" (click)="confirm()">{{routeDetails[0].parcel.activity}}</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

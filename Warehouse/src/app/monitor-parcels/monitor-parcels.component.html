@@ -1,0 +1,138 @@
+<!-- Monitor Parcels Page-->
+<div class="date-container ml-3">
+  <h3 class="pr-2 title pb-1">DATE: </h3>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" readonly="true" class="pt-1 searchbar pa-1" [min]="today">
+    <mat-datepicker-toggle matSuffix [for]="picker" class="ml-2 pt-2"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+<div class="full-container ml-3 mr-3 mb-3">
+  <!-- Parcels -->
+  <mat-card class="mat-elevation-z8 ma-0 pa-0 parcels-card">
+    <mat-toolbar color="paw-it-green">
+      <span>Current parcels</span>
+    </mat-toolbar>
+    <div class="scrollable">
+      <mat-card class="mb-0 pt-0 pb-0 mat-elevation-z0">
+        <mat-card-content class="container pb-0">
+
+          <mat-form-field class="pt-3 input-container">
+            <input matInput type="text" [(ngModel)]="parcel" class="searchbar pa-1" placeholder="Search parcel ID">
+            <button mat-button *ngIf="parcel" matSuffix mat-icon-button aria-label="Clear" (click)="parcel=''">
+              <mat-icon class="mb-3 ml-3">close</mat-icon>
+            </button>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="mb-0 pt-0 pb-0 mat-elevation-z0">
+        <br>
+        <mat-card-content class="container">
+          <!--Insert table here-->
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngFor = "let details of parcels">
+            <!--Parcel ID No. Column-->
+            <ng-container matColumnDef="parcelID">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef> {{details.details.parcelID}} </td>
+            </ng-container>
+
+            <!-- Parcel Description Column -->
+            <ng-container matColumnDef="parcelDesc">
+              <th mat-header-cell *matHeaderCellDef> Parcel Description </th>
+              <td mat-cell *matCellDef> {{details.details.parcelDesc}} </td>
+            </ng-container>
+
+            <!-- Service Fee Column -->
+            <ng-container matColumnDef="service">
+              <th mat-header-cell *matHeaderCellDef> Service </th>
+              <td mat-cell *matCellDef> {{details.details.serviceFee}} </td>
+            </ng-container>
+
+            <!-- Status Column -->
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef> Status </th>
+              <td mat-cell *matCellDef> {{sample.status}} </td>
+            </ng-container>
+
+            <!-- Courier Column -->
+            <ng-container matColumnDef="courier">
+              <th mat-header-cell *matHeaderCellDef> Courier </th>
+              <td mat-cell *matCellDef> {{sample.courier}} </td>
+            </ng-container>
+
+            <!-- Remarks Column -->
+            <ng-container matColumnDef="remarks">
+              <th mat-header-cell *matHeaderCellDef> Remarks </th>
+              <td mat-cell *matCellDef> {{sample.remarks}} </td>
+              <td mat-cell *matCellDef> {{sample.remark}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-card>
+
+  <!-- Parcel Details -->
+  <mat-card class="mat-elevation-z8 ml-3 pa-0 cash-card">
+    <mat-toolbar>Cash for remittance</mat-toolbar>
+    <div class="scrollable">
+      <mat-card class="mb-0 pt-0 pb-0 mat-elevation-z0">
+        <mat-card-content class="container pb-0">
+          <mat-form-field class="pt-3 input-container monitor">
+            <input matInput type="text" [(ngModel)]="cash" class="searchbar pa-1" placeholder="Search cash for remittance">
+            <button mat-button *ngIf="parcel" matSuffix mat-icon-button aria-label="Clear" (click)="cash=''">
+              <mat-icon class="mb-3 ml-3">close</mat-icon>
+            </button>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+      <mat-card-content class="pa-3">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <!-- Parcel ID No. Column-->
+          <ng-container matColumnDef="parcelID">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let sample"> {{sample.parcelID}} </td>
+          </ng-container>
+
+          <!-- Parcel description column -->
+          <ng-container matColumnDef="parcelDesc">
+            <th mat-header-cell *matHeaderCellDef> Parcel Description </th>
+            <td mat-cell *matCellDef="let sample"> {{sample.parcelDesc}} </td>
+          </ng-container>
+
+          <!-- Cash amount column-->
+          <ng-container matColumnDef="service">
+            <th mat-header-cell *matHeaderCellDef> Amount </th>
+            <td mat-cell *matCellDef="let sample"> {{sample.service}} </td>
+          </ng-container>
+
+          <!-- Status Column -->
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let sample"> {{sample.status}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="courier">
+            <th mat-header-cell *matHeaderCellDef> Courier </th>
+            <td mat-cell *matCellDef="let sample"> {{sample.courier}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="remarks">
+            <th mat-header-cell *matHeaderCellDef> Remarks </th>
+            <td mat-cell *matCellDef="let sample"> {{sample.remarks}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </mat-card-content>
+    </div>
+  </mat-card>
+</div>

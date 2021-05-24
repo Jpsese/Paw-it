@@ -1,0 +1,7 @@
+{
+  "name": "Paw-it",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

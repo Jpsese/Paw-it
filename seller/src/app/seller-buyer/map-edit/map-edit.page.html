@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button (click)="dismiss()" slot="start" fill="clear" color="secondary" size="small">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <input [(ngModel)]="address" [options]="googlePlacesOptions" ngx-google-places-autocomplete #placeRef='ngx-places'
+      (onAddressChange)="autoComplete($event)" class="mapwidth" (focus)="togglesearchbar()"
+      (focusout)="togglesearchbar()">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="full-container mt-1" [hidden]="mapvisibility">
+    <div class="map">
+      <img src="../../../assets/images/pin.png" style="height: 50px;
+                  width: 50px;
+                  position: absolute;
+                  z-index: 9999;
+                  left: 50%;
+                  transform: translate(-50%);
+                  top: 39.5%;
+                  pointer-events: none;">
+      <div #map id="map" style="height: 100%;"></div>
+    </div>
+  </div>
+</ion-content>

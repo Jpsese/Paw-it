@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-button fill="clear" (click)="dismiss()" slot="start">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>Parcel Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="scrollable">
+    <p class="split">{{routeDetails[0].activity}}
+      <span *ngIf="routeDetails[0].parcelDetails.COD === 1">Cash-on-Delivery</span>
+      <span *ngIf="routeDetails[0].parcelDetails.COD === 0">Non-Cash-on-Delivery</span>
+    </p>
+    <ion-card-content>
+      <img src="{{routeDetails[0].parcelDetails.imgUrl}}">
+      <table>
+        <tr>
+          <td>Sender:</td>
+          <td>{{routeDetails[0].activityDetails.name}}</td>
+        </tr>
+        <tr>
+          <td>Contact No: </td>
+          <td>{{routeDetails[0].activityDetails.contact}}</td>
+        </tr>
+        <tr *ngIf="(routeDetails[0].status === 'delivery' && routeDetails[0].COD) || (routeDetails[0].status === 'remittance' && routeDetails[0].COD)">
+          <td>Remittance amount: </td>
+          <td>&#8369;{{routeDetails[0].cash}}</td>
+        </tr>
+        <tr>
+          <td>Pouch Size: </td>
+          <td>{{routeDetails[0].parcelDetails.pouchSize}}</td>
+        </tr>
+        <tr>
+          <td>Location: </td>
+          <td>{{routeDetails[0].activityDetails.location.address}}</td>
+        </tr>
+        <tr>
+          <td>Schedule: </td>
+          <td>{{routeDetails[0].activityDetails.date}} {{routeDetails[0].activityDetails.time}}</td>
+        </tr>
+      </table>
+    </ion-card-content>
+  </ion-card>
+
+  <div #mapElement class="map"></div>
+</ion-content>

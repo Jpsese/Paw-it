@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="../../../assets/images/new_brand.png" width="90px" height="30px">
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content *ngFor="let detail of details">
+    <ion-grid>
+        <ion-row class="pa-3">
+            <ion-col size="12">
+                <ion-label position="stacked" class="form-label pb-2" color="tertiary">First name :</ion-label>
+                <ion-input readonly="true" [(ngModel)]="detail.firstName" class="form-input pl-2">
+                </ion-input>
+                <ion-label position="stacked" class="form-label pb-2" color="tertiary">Last name :</ion-label>
+                <ion-input readonly="true" [(ngModel)]="detail.lastName" placeholder="Doe" class="form-input pl-2">
+                </ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row class="pr-3 pl-3">
+            <ion-col>
+                <ion-label position="stacked" class="form-label" color="tertiary">Email address :</ion-label>
+                <ion-input readonly="true" [(ngModel)]="detail.email" placeholder="JohnDoe@gmail.com"
+                    class="input-border  pl-2">
+                </ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row class="pr-3 pl-3">
+            <ion-col>
+                <ion-label position="stacked" class="form-label" color="tertiary">Contact Number :</ion-label>
+                <ion-input readonly="true" [(ngModel)]="detail.contactNumber" placeholder="09991639090"
+                    class="input-border  pl-2">
+                </ion-input>
+            </ion-col>
+        </ion-row>
+
+    <ion-row class="pr-3 pl-3 pt-2">
+      <ion-segment>
+        <ion-segment-button (click)="editContact()">
+          Update Contact #
+        </ion-segment-button>
+        <ion-segment-button (click)="changePassword()">
+          Change Password
+        </ion-segment-button>
+      </ion-segment>
+    </ion-row>
+
+
+    <form [formGroup]="formContact" (ngSubmit)="updateContact(formContact.value)" *ngIf="showContactInput">
+      <ion-row class="pr-3 pl-3">
+        <ion-col>
+          <ion-label position="stacked" class="form-label-enable" color="tertiary">New contact number :
+          </ion-label>
+          <ion-input formControlName="newcontactnum" placeholder="09991639090" class="input-border-enable  pl-2">
+          </ion-input>
+          <ion-button class="btn" type="submit" expand="full" [disabled]="!formContact.valid">Save
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+
+    <form [formGroup]="formPassword" (ngSubmit)="updatePassword(formPassword.value)" *ngIf="showPasswordInput">
+      <ion-row class="pr-3 pl-3">
+        <ion-col>
+          <ion-label position="stacked" class="form-label-enable" color="tertiary">Old password :
+          </ion-label>
+          <ion-input type="password" formControlName="oldpassword" class="input-border-enable  pl-2">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pr-3 pl-3">
+        <ion-col>
+          <ion-label position="stacked" class="form-label-enable" color="tertiary">New password :
+          </ion-label>
+          <ion-input type="password" formControlName="newpassword" class="input-border-enable  pl-2">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pr-3 pl-3">
+        <ion-col>
+          <ion-label position="stacked" class="form-label-enable" color="tertiary">Confirm new password :
+          </ion-label>
+          <ion-input type="password" formControlName="newconfpassword" class="input-border-enable  pl-2">
+          </ion-input>
+          <ion-button class="btn" type="submit" expand="full" [disabled]="!formPassword.valid">Save
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+
+
+  <ion-list *ngIf="showPasswordInput == true" color="primary" class="itemtype" lines="none">
+
+  </ion-list>
+
+</ion-content>

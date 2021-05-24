@@ -1,0 +1,32 @@
+<div class="login-container">
+  <mat-card class="mat-elevation-z6 card-container">
+    <mat-card-content>
+
+      <div>
+        <div>
+          <img width="50%" src="../../assets/images/new_brand_2.png" alt="">
+        </div>
+        <form [formGroup] = "forms" (ngSubmit)="loginForms(forms.value)"class="login-form">
+          <mat-list>
+            <mat-list-item>
+              <mat-icon matListIcon>email</mat-icon>
+              <mat-form-field matLine class="input-full-width">
+                <input matInput placeholder="Email Address" formControlName="email">
+              </mat-form-field>
+            </mat-list-item>
+  
+            <mat-list-item>
+              <mat-icon matListIcon>lock</mat-icon>
+              <mat-form-field matLine class="input-full-width">
+                <input matInput placeholder="Password" formControlName="password" type="password">
+              </mat-form-field>
+            </mat-list-item>
+          </mat-list>
+          <button type="submit" [disabled]="!forms.valid" mat-raised-button>Login</button>
+
+        </form>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+</div>

@@ -1,0 +1,30 @@
+<ion-content padding text-center color="primary">
+  <div class="space1"></div>
+  <div class="space pa-0 ma-0">
+    <ion-img src="../../assets/images/new_brand.png"></ion-img>
+  </div>
+  <ion-title class="pb-2 pt-4">COURIER MODULE</ion-title>
+  <form [formGroup]="forms" (ngSubmit)="loginForm(forms.value)">
+    <ion-item>
+      <ion-input placeholder="Email" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col *ngIf="forms.get('email').errors && (forms.get('email').touched || forms.get('email').dirty)"
+        class="errormessage">
+        Please enter your email.
+      </ion-col>
+    </ion-row>
+    <ion-item>
+      <ion-input placeholder="Password" formControlName="password" type="password"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col *ngIf="forms.get('password').errors && (forms.get('password').touched || forms.get('password').dirty)"
+        class="errormessage">
+        Please enter your password.
+      </ion-col>
+    </ion-row>
+    <div id="buttons">
+      <ion-button expand="full" type="submit" [disabled]="!forms.valid" color="secondary">Login</ion-button>
+    </div>
+  </form>
+</ion-content>

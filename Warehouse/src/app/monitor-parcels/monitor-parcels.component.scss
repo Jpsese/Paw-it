@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap");
+.mat-list-base {
+  width: 100%;
+}
+.full-container {
+  display: flex;
+  height: 90%;
+}
+.full-width {
+  width: 100%;
+  height: 10px;
+}
+.date-container {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  margin-top: 5rem;
+  margin: 1px solid black;
+}
+.container {
+  display: flex;
+}
+
+.courier-card {
+  width: 15%;
+  display: inline-block;
+}
+.toolbar-height {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
+  height: 10%;
+}
+
+.parcels-card {
+  width: 60%;
+  display: inline-block;
+}
+.searchbar-container {
+  width: 100%;
+  display: inline-block;
+}
+.cash-card {
+  width: 40%;
+  display: inline-block;
+}
+
+.subtitle {
+  color: rgba(0, 0, 0, 0.54);
+}
+.mat-toolbar {
+  background-color: #34421e !important;
+  color: #fff !important;
+}
+
+.dispatch-list {
+  width: 50%;
+}
+
+.incoming-list {
+  width: 50%;
+}
+
+.scrollable {
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(100% - 64px);
+}
+
+.dispatch-title {
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+}
+
+.incoming-title {
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+}
+.input-container {
+  width: 100%;
+}
+
+.title {
+  font-family: "Open Sans", sans-serif;
+  color: #c19433;
+}
+
+.runs {
+  display: flex;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+// Scrollbar Style
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #34421e;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c19434;
+}
+//
+
+.flex {
+  display: flex;
+}
+
+.parcel-img {
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  img {
+    object-fit: scale-down;
+  }
+}
+table {
+  width: 100%;
+  margin-top: 5px;
+  height: 500px;
+  overflow-y: scroll;
+}
+:host ::ng-deep input.searchbar {
+  border: 1px solid #818181;
+  border-radius: 20px;
+  background-color: #f1f1ef;
+  min-width: 30%;
+  font-size: 12px;
+  height: 20px;
+  color: black;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+.input-container {
+  width: 100%;
+}
+.searchtitle {
+}
+
+mat-datepicker-toggle {
+  color: #c19432;
+}
+::ng-deep .mat-form-field-label-wrapper {
+  margin-left:4px !important;
+  margin-top:4px;
+}
+input:focus{
+  background-color: #cfced0;
+}

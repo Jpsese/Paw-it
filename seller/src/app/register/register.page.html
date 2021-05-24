@@ -1,0 +1,108 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button slot="start" (click)="back()" fill="clear" color="secondary">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </ion-button>
+        <ion-title>REGISTRATION</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content color="primary">
+    <ion-grid>
+        <form [formGroup]="forms" (ngSubmit)="registerForm(forms.value)">
+            <ion-row>
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">First name :</ion-label>
+                    <ion-input formControlName="fname" placeholder="(e.g. Genrie)" class="form-input mt-1 pl-2">
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col *ngIf="forms.get('fname').errors && (forms.get('fname').touched || forms.get('fname').dirty)"
+                    class="errormessage">
+                    Enter first name.
+                </ion-col>
+            </ion-row>
+
+            <!-- Last Name-->
+            <ion-row>
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">Last name :</ion-label>
+                    <ion-input placeholder="Last Name" formControlName="lname" class="form-input mt-1 pl-2"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col *ngIf="forms.get('lname').errors && (forms.get('lname').touched || forms.get('lname').dirty)"
+                    class="errormessage">
+                    Enter last name.
+                </ion-col>
+            </ion-row>
+
+            <!-- Email Address-->
+            <ion-row>
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">Email Address :</ion-label>
+                    <ion-input placeholder="(e.g: asdfg@gmail.com)" formControlName="email"
+                        class="form-input mt-1 pl-2">
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col *ngIf="forms.get('email').errors && (forms.get('email').touched || forms.get('email').dirty)"
+                    class="errormessage">
+                    Enter Email
+                </ion-col>
+            </ion-row>
+
+            <!--Contact Number-->
+            <ion-row>
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">Contact # :</ion-label>
+                    <ion-input placeholder="09064382376" formControlName="contactnum" class="form-input mt-1 pl-2">
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col
+                    *ngIf="forms.get('contactnum').errors && (forms.get('contactnum').touched || forms.get('contactnum').dirty)"
+                    class="errormessage">
+                    only 0-9 available and must not exceed 11 digits
+                </ion-col>
+            </ion-row>
+
+            <!--Password-->
+            <ion-row>
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">Password :</ion-label>
+                    <ion-input type="password" placeholder="Minimum of 6 characters" formControlName="password"
+                        class="form-input mt-1 pl-2">
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col *ngIf="forms.get('email').errors && (forms.get('email').touched || forms.get('email').dirty)"
+                    class="errormessage">
+                    Enter Password
+                </ion-col>
+            </ion-row>
+
+            <!--Confirm Password-->
+            <ion-row>
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">Confirm password :</ion-label>
+                    <ion-input type="password" placeholder="Confirm Password" formControlName="confpassword"
+                        class="form-input mt-1 pl-2">
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col *ngIf="forms.get('email').errors && (forms.get('email').touched || forms.get('email').dirty)"
+                    class="errormessage">
+                    Enter Confirm Password
+                </ion-col>
+            </ion-row>
+
+            <ion-button class="btn" type="submit" expand="full" [disabled]="!forms.valid" color="secondary">Register
+            </ion-button>
+        </form>
+    </ion-grid>
+</ion-content>

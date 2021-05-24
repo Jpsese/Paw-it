@@ -1,0 +1,212 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="dismiss()" slot="start" fill="clear" color="secondary" size="small">
+            <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+        <ion-title>{{parcel.details.datePosted}} {{parcel.details.timePosted}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+    <div class="flex pr-3 pl-3 pt-3">
+        <div>
+            <h3>Error/s:</h3>
+            <p>{{parcel.error}}</p>
+        </div>
+    </div>
+    <form [formGroup]="forms" (ngSubmit)="postPickup(forms.value)">
+        <ion-grid>
+            <!--Photo Edit-->
+            <ion-row class="pr-3 pl-3 pt-3 pb-1" height="400px" width="300px">
+                <!-- <ion-col size="4" style="border-bottom:1px solid #aaa9a9;border-top:1px solid #aaa9a9;border-left:1px solid #aaa9a9">
+        </ion-col> -->
+                <ion-col class="parcel-image" *ngIf="image === null">
+                    <div>
+                        <div class="div-img">
+                            <img src="{{parcel.details.imgUrl}}" width="30%">
+                        </div>
+                    </div>
+                </ion-col>
+                <ion-col class="empty-parcel" *ngIf="image !== null">
+                    <img [src]="image" width="30%">
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-button expand="full" color="secondary" (click)="takePhoto()">Change Parcel Picture</ion-button>
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">Parcel description</ion-label>
+                    <ion-input formControlName="description" placeholder="Parcel description (eg. T-shirt, Deodorant)" class="form-input mt-1 pl-1">
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+
+            <!--Pouch Size edit-->
+
+            <ion-row class="mb-2 bb bt pr-3 pl-3">
+                <ion-col class="row ">
+                    <ion-segment formControlName="itemSize">
+                        <ion-segment-button value="small" class="small">
+                            <ion-label>Small </ion-label>
+                        </ion-segment-button>
+                        <ion-segment-button value="medium" class="medium">
+                            <ion-label>Medium </ion-label>
+                        </ion-segment-button>
+                        <ion-segment-button value="large" class="large">
+                            <ion-label>Large </ion-label>
+                        </ion-segment-button>
+                    </ion-segment>
+                </ion-col>
+            </ion-row>
+
+            <!-- Pick-up information-->
+            <ion-row class="row bt pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">Pick-up information</ion-label>
+                    <ion-input formControlName="senderName" placeholder="Full name of recipient" class="form-input mt-1 pl-1">
+                        <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+                            <ion-icon name="person"></ion-icon>
+                        </ion-button>
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="row pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-input formControlName="senderContact" type="number" placeholder="Contact number" class="form-input mt-1 pl-1">
+                        <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+                            <ion-icon name="call"></ion-icon>
+                        </ion-button>
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="row pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-input [disabled]="true" type="text" (click)="presentModal('P')" class="form-input mt-1 pl-1" placeholder="Pick-up address">
+                        <ion-button slot="end" fill="clear" color="secondary" size="small">
+                            <ion-icon name="pin"></ion-icon>
+                        </ion-button>
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="row bb pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">Pick-up Time</ion-label>
+                    <ion-datetime formControlName="pickUpTime" min="{{minDate}}" max="{{maxDate}}" display-format="MMM DD YYYY , HH:mm " minuteValues="0"
+                        hourValues="9,10,11,12,13,14,15,16,17" class="form-input mt-1" placeholder="Pick-up date and time">
+                    </ion-datetime>
+                </ion-col>
+            </ion-row>
+
+            <!--Delivery information-->
+            <ion-row class="row bt pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">Delivery information</ion-label>
+                    <ion-input formControlName="recepientName" placeholder="Full name of recipient" class="form-input mt-1 pl-1">
+                        <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+                            <ion-icon name="person"></ion-icon>
+                        </ion-button>
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="row pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-input formControlName="recepientContact" type="number" placeholder="Contact number" class="form-input mt-1 pl-1">
+                        <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+                            <ion-icon name="call"></ion-icon>
+                        </ion-button>
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="row pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-input [disabled]="true" type="text" (click)="presentModal('D')" class="form-input mt-1 pl-1" placeholder="Delivery address">
+                        <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+                            <ion-icon name="pin"></ion-icon>
+                        </ion-button>
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="row bb pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-datetime formControlName="deliveryTime" min="{{minDate}}" max="{{maxDate}}" display-format="MMM DD YYYY , HH:mm " minuteValues="0"
+                        hourValues="9,10,11,12,13,14,15,16,17" class="form-input mt-1" placeholder="Delivery date and time">
+                    </ion-datetime>
+                </ion-col>
+            </ion-row>
+
+            <!-- IF SERVICE IS COD -->
+            <ion-row *ngIf="this.parcel.details.COD === 1" class="row bt pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-label position="stacked" class="form-label pb-3 mb-8">Remittance delivery information :
+                    </ion-label>
+                    <ion-input formControlName="CODName" placeholder="Full name of recipient" class="form-input mt-1 pl-1">
+                        <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+                            <ion-icon name="person"></ion-icon>
+                        </ion-button>
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+
+            <ion-row *ngIf="this.parcel.details.COD === 1" class="row pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-input formControlName="CODContact" type="number" placeholder="Contact number" class="form-input mt-1 pl-1">
+                        <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+                            <ion-icon name="call"></ion-icon>
+                        </ion-button>
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+
+
+            <!-- IF SERVICE IS COD -->
+            <ion-row *ngIf="this.parcel.details.COD === 1" class="row pr-3 pl-3 pb-1">
+                <ion-col>
+                    <ion-label position="stacked" class="form-label">Remittance amount</ion-label>
+                    <ion-input formControlName="itemVal" placeholder="Remittance amount" type="number" maxlength="" class="form-input mt-1 pl-1">
+                        <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+                            <ion-icon name="cash"></ion-icon>
+                        </ion-button>
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <!-- Additional remittance info -->
+            <!-- ISSUE: No functional backend yet -->
+            <ion-row class="row pr-3 pl-3 pb-1" *ngIf="this.parcel.details.COD === 1">
+                <ion-col>
+                    <ion-input [disabled]="true" type="text" (click)="presentModal('C')" class="form-input mt-1 pl-1" placeholder="Delivery remittance address">
+                        <ion-button slot="end" fill="clear" color="secondary" class="transparent" size="small">
+                            <ion-icon name="pin"></ion-icon>
+                        </ion-button>
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="row bb pr-3 pl-3 pb-1" *ngIf="this.parcel.details.COD === 1">
+                <ion-col>
+                    <ion-label position="stacked" class="form-label">Remittance time :</ion-label>
+                    <ion-datetime formControlName="CODTime" min="{{minDate}}" max="{{maxDate}}" display-format="MMM DD YYYY , HH:mm " minuteValues="0"
+                        hourValues="9,10,11,12,13,14,15,16,17" class="form-input mt-1">
+                    </ion-datetime>
+                </ion-col>
+            </ion-row>
+            <!-- <ion-row class="row bt" *ngIf="this.parcel.details.COD === 1">
+        <ion-col>
+          <ion-label position="stacked" class="form-label pb-3 mb-8">Remittance Location :
+          </ion-label>
+          <ion-input [disabled]="true" type="text" (click)="presentModal('C')" class="form-input mt-1 pl-1">
+            <ion-button slot="end" fill="clear" color="secondary" size="small">
+              <ion-icon name="radio-button-off"></ion-icon>
+            </ion-button>
+          </ion-input>
+        </ion-col>
+      </ion-row> -->
+            <ion-button expand="full" color="secondary" type="submit" [disabled]="!forms.valid">
+                <ion-icon name="refresh"></ion-icon>PLACE ORDER AGAIN
+            </ion-button>
+        </ion-grid>
+
+    </form>
+</ion-content>

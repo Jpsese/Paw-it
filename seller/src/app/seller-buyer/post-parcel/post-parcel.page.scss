@@ -1,0 +1,108 @@
+.header {
+  background-color: #0e3602;
+}
+
+ion-content {
+  --background: none;
+  background-image: url("../../../assets/images/bg.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-placement {
+  align-self: center;
+}
+img {
+  align-items: center;
+}
+
+h4 {
+  text-align: center;
+  color: #5d280b;
+}
+.form-input {
+  color: black;
+  border-bottom: 1px solid #cfcfcf;
+  background-color: #f1f1f2;
+  font-size: 13px;
+  width: 100%;
+}
+
+.form-date {
+  border-bottom: 1px solid #cfcfcf;
+  background-color: #f1f1f2;
+  font-size: 13px;
+  width: 100%;
+}
+
+.form-label {
+  color: #c45602;
+  margin-top: 8px !important;
+}
+ion-button {
+  background: none !important;
+  background-color: none !important;
+  box-shadow: none !important;
+}
+
+ion-toolbar {
+  --min-height: 6vh;
+}
+
+ion-segment-button.small {
+  --indicator-color: #f4f2f2;
+  --color: #0e3602;
+  --color-activated: #c45602;
+  --color-checked: #c45602;
+}
+ion-segment-button.medium {
+  --indicator-color: #f4f2f2;
+  --color: #114402;
+  --color-activated: #c45602;
+  --color-checked: #c45602;
+}
+ion-segment-button.large {
+  --indicator-color: #f4f2f2;
+  --color: #144d03;
+  --color-activated: #c45602;
+  --color-checked: #c45602;
+}
+
+ion-list.itemtype {
+  background-color: #f1f3f4;
+  min-height: 12px;
+}
+.forcefont {
+  color: rgb(215, 10, 10) !important;
+}
+.errormessage {
+  color: rgb(240, 100, 100);
+  font-size: 12px;
+}
+.test {
+  padding-left: 0;
+  margin: 0;
+}
+.checkbox {
+  margin-right: 5px;
+  background-color:red;
+}
+.row {
+  background-color: #ffffff;
+}
+.imagecontainer{
+  border:1px solid #cfcfcf;
+}
+
+.test {
+  --placeholder-color: red !important;
+}
+
+.split {
+  display: block;
+}
+
+.split span {
+  display: block;
+  float: right;
+}

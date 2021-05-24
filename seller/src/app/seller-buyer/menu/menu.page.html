@@ -1,0 +1,41 @@
+<ion-menu contentId="content">
+  <ion-content>
+    <div id="head">
+      <img id="imgseller" src="../../../assets/images/new_brand.png">
+      <ion-title id="greet" *ngFor="let details of details">Hello {{details.firstName}} {{details.lastName}}!</ion-title>
+    </div>
+    <div>
+      <ion-menu-toggle auto-hide="false">
+        <ion-item [routerLink]="['/menu/seller/post-parcel']" routerDirection="root" routerLinkActive="active">
+          <ion-label>
+            Schedule a delivery
+          </ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/menu/seller/pending-transaction']" routerDirection="root" routerLinkActive="active">
+          <ion-label>
+            Transactions
+          </ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/menu/seller/profile']" routerDirection="root" routerLinkActive="active">
+          <ion-label>
+            Profile
+          </ion-label>
+        </ion-item> 
+        <ion-item [routerLink]="['/menu/seller/trackingpage']" routerDirection="root" routerLinkActive="active">
+          <ion-label>
+            Tracking
+          </ion-label>
+        </ion-item>         
+      </ion-menu-toggle>
+
+    </div>
+    <div id="logout">
+      <ion-item (click)="signOut()">
+        <ion-label>Logout</ion-label>
+      </ion-item>
+    </div>
+  </ion-content>
+
+</ion-menu>
+
+<ion-router-outlet id="content" main></ion-router-outlet>

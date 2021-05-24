@@ -1,0 +1,88 @@
+.form-input {
+  color: #5a5b5d;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  font-size: 13px;
+  width: 100%;
+  height: 35px;
+}
+.form-label {
+  color: #adadae;
+}
+.row {
+  background-color: #ffffff;
+}
+.bb{
+  border-bottom:1px solid #b4b3b3;
+}
+.bt{
+  border-top:1px solid #b4b3b3;
+}
+.pouch-size {
+  text-align: center;
+  justify-content: center;
+}
+ion-segment {
+  border: 0.5px solid #cfcfcf;
+  border-radius: 10px;
+  padding: 0;
+}
+ion-segment-button.small {
+  --background-checked: #114402;
+  --indicator-color: #f4f2f2;
+  --indicator-color-checked: #cccccc;
+  --color: #0e3602;
+  --color-activated: #c45602;
+  --color-checked: #c45602;
+  border-radius: 10px;
+}
+ion-segment-button.medium {
+  --background-checked: #114402;
+  --indicator-color: #f4f2f2;
+  --indicator-color-checked: #bbbbbb;
+  --color: #114402;
+  --color-activated: #c45602;
+  --color-checked: #c45602;
+  border-radius: 10px;
+}
+ion-segment-button.large {
+  --background-checked: #114402;
+  --indicator-color: #f4f2f2;
+  --indicator-color-checked: #9a9a9a;
+  --color: #144d03;
+  --color-activated: #c45602;
+  --color-checked: #c45602;
+  border-radius: 10px;
+}
+
+.parcel-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #b4b3b3;
+}
+
+.div-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.empty-parcel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #b4b3b3;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  p{
+    color: darkred
+  }
+  h3{
+    color: darkred
+  }
+}

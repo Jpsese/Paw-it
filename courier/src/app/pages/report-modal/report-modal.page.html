@@ -1,0 +1,21 @@
+<div class="pl-3 pr-3">
+  <h1>Report</h1>
+  <p>Please specify the reason for the report</p>
+</div>
+<span class="divider"></span>
+<ion-content>
+  <div class="pl-3 pt-2 pr-4">
+    <!-- Text area -->
+    <div class="pl-3 mb-3">
+      <ion-textarea style="border: 1px solid rgba(0,0,0,.12)" rows="2" placeholder="Enter reason here..." [(ngModel)]="others"></ion-textarea>
+    </div>
+    <!-- Action buttons -->
+  </div>
+  <span class="divider"></span>
+  <ion-footer>
+    <ion-toolbar class="pr-3">
+      <ion-button color="danger" slot="end" (click)="dismiss()">Cancel</ion-button>
+      <ion-button color="success" slot="end" (click)="sendError()" [disabled]="!others">Done</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

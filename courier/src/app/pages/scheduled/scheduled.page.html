@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Scheduled</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime display-format="MMM DD YYYY" min="{{minYear}}" max="{{maxDay}}" [ngModel]="date" (ngModelChange)="changeDate($event)"></ion-datetime>
+  </ion-item>
+  <div class="empty-message" *ngIf="!routes">
+    <div>
+      <div class="empty-image">
+        <img class="empty-img" src="../../../assets/images/empty-schedule.png" alt="">
+      </div>
+      <p class="empty-title">No scheduled delivery run</p>
+    </div>
+  </div>
+  <ion-card (click)="sendData(route)" *ngFor="let route of routes">
+    <p class="split">{{route.activity}}
+      <span>{{route.activityDetails.time}}</span>
+    </p>
+    <ion-card-content no-padding padding-bottom padding-horizontal>
+      <p>
+        <ion-icon name="pin" slot="start"></ion-icon> {{route.activityDetails.location.address}}</p>
+      <p>
+        <ion-icon name="person" slot="start"></ion-icon> {{route.activityDetails.name}}</p>
+      <p>
+        <ion-icon name="call" slot="start"></ion-icon> {{route.activityDetails.contact}}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

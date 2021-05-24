@@ -1,0 +1,7 @@
+<div ngxUiLoaderBlurred style="height: 100%">
+  <app-header *ngIf="showMenu"></app-header>
+
+  <router-outlet></router-outlet>
+</div>
+<ngx-ui-loader [hasProgressBar]="false" fgsColor="#34421e" overlayColor="#EEE" textColor="black" text="Reconnecting" logoSize="120" logoUrl="../../assets/images/pagakpak.png" [fgsType]="this.spinner.foldingCube"></ngx-ui-loader>
+

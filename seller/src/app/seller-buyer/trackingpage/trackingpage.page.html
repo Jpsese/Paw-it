@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+    <ion-title>
+      <img src="../../../assets/images/new_brand.png" width="90px" style="display:inline-block" height="30px">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color=primary>
+  <form [formGroup]="forms" (ngSubmit)="parcelLogs(forms.value)" (ngSubmit)="parcelDetails(forms.value)">
+    <ion-item lines="none">
+      <ion-icon name="radio-button-off" color="secondary"></ion-icon>
+      <ion-input formControlName="trackingId" placeholder="Tracking #:"></ion-input>
+      <ion-button type="submit" fill="clear">
+        <ion-icon name="arrow-dropright" slot="end" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </form>
+  <!-- PARCEL STATUS>>>>>>> <ion-item lines="none">
+      <ion-label>PARCEL STATUS: </ion-label>
+    </ion-item> -->
+
+
+  <!-- <div class="errormessage">
+      Invalid Tracking # !
+    </div> -->
+  <div class="map">
+    <div class="head">
+      <h5>Parcel ID: </h5><p *ngFor="let status of status">{{status.id}}</p>
+      <h5>Status: </h5><p *ngFor="let status of status">{{status.stat}}</p>
+      <h2 *ngIf="null == true">There is no parcel found</h2>
+    </div>
+    <h5 class="title">Parcel Logs </h5>
+    <ion-card class="card" *ngFor="let log of logs">
+      <p>Date: {{log.date}}</p>
+      <p>Time: {{log.time}}</p>
+      <p>Remark: {{log.remarks.remarks}}</p>
+    </ion-card>
+  </div>
+</ion-content>

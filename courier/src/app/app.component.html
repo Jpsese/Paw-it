@@ -1,0 +1,6 @@
+<ion-app>
+  <div class="offline-mode" *ngIf="!this.isConnected">
+      <ion-spinner name="lines-small"></ion-spinner>You are offline. Trying to reconnect
+  </div>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "pawit-panel2"
+  },
+  "targets": {
+    "pawit-panel2": {
+      "hosting": {
+        "panel2-ls": [
+          "pawit-panel2-ls"
+        ],
+        "panel2-wh": [
+          "pawit-panel2-wh"
+        ]
+      }
+    }
+  }
+}
